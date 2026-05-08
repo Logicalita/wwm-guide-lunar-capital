@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Winds Meet · Build Guide VN</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="hamburger" id="hamburger" aria-label="Mở menu"><i class="ti ti-menu-2"></i></button>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">where winds meet</div>
+      <div class="sidebar-title">Build Guide</div>
+      <div class="sidebar-flourish"><span></span><span class="dot"></span><span></span></div>
+    </div>
+    <div class="sidebar-section-label">Mục lục</div>
+    <nav class="nav">
+      <button class="nav-item active" data-page="intro">
+        <i class="ti ti-scroll"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Lời mở đầu</div>
+          <div class="nav-item-sub">Giới thiệu &amp; mục lục</div>
+        </div>
+      </button>
+      <button class="nav-item" data-page="tank">
+        <i class="ti ti-shield-check"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Chỉ số Tank</div>
+          <div class="nav-item-sub">Stonesplit-Might</div>
+        </div>
+      </button>
+      <button class="nav-item" data-page="general">
+        <i class="ti ti-sword"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Chỉ số tấn công</div>
+          <div class="nav-item-sub">Chung cho mọi phái</div>
+        </div>
+      </button>
+    </nav>
+    <div class="sidebar-footer">phiên bản tiếng việt</div>
+  </aside>
+
+  <div class="scrim" id="scrim"></div>
+
+  <main class="content">
+
+    <section class="page active" id="page-intro">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">lời mở đầu</div>
+            <h1>Guide xây dựng nhân vật</h1>
+            <div class="sub">Tổng hợp thông tin chỉ số dành cho anh em trong guild — bằng tiếng Việt.</div>
+          </div>
+        </div>
+
+        <div class="card preface-card">
+          <h2><i class="ti ti-quote"></i>Vì sao có guide này</h2>
+          <p>Chào anh em.</p>
+          <p>Mình chơi tank đã khá lâu, nhưng phải thừa nhận là nhiều lần <strong>hiểu sai về chỉ số</strong> — roll gear xong vẫn không lý giải được tại sao DPS lúc cao lúc thấp, hoặc tin theo những guide chung chung mà không phù hợp với class mình đang dùng.</p>
+          <p>Sau một thời gian lội qua các post từ cộng đồng quốc tế, CN, kết hợp test trực tiếp trên dummy, mình quyết định ngồi lại tổng hợp thành guide này — viết bằng tiếng Việt, dành riêng cho anh em trong guild dùng tham khảo.</p>
+          <p>Build sẽ tốt hơn nếu mình cùng nhau hoàn thiện. Mọi người có góp ý, thông tin mới hoặc phát hiện sai sót gì, <strong>cứ nhắn cho mình</strong> để cập nhật nhé.</p>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-book-2"></i>Trong guide có gì</h2>
+          <div class="toc">
+            <button class="toc-item" data-goto="tank">
+              <i class="ti ti-shield-check toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Chỉ số dành cho Tank (Stonesplit-Might)</div>
+                <div class="toc-sub">Build chí mạng cho Mạc Đao — chỉ số mục tiêu, ngưỡng cap, ưu tiên gear.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="general">
+              <i class="ti ti-sword toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Giải thích chỉ số tấn công chung</div>
+                <div class="toc-sub">Cách hệ thống stat hoạt động — vì sao min thuộc tính khác hệ là dòng tốt nhất.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-message-circle"></i>
+          <div class="warn-text">
+            <strong>Góp ý &amp; feedback:</strong> Nếu anh em phát hiện sai sót, có data mới, hoặc muốn thêm class/build khác — cứ nhắn trực tiếp cho mình. Guide này là của chung, mình sẽ cập nhật vào bản mới.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page" id="page-tank">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Liệt Thạch - Uy</div>
+            <h1>Hướng dẫn build chí mạng Tank</h1>
+          </div>
+        </div>
+
+        <div class="key-card">
+          <span class="key-badge">Mục tiêu chính</span>
+          <div class="key-num">56%</div>
+          <div class="key-lbl">Effective chí mạng từ gear</div>
+          <div class="key-desc">
+            Chỉ cần <strong>56% effective</strong> (chỉ số vàng) từ trang bị &amp; công pháp, vì bị động công pháp Mạc Đao đã cho <strong>+24% crit rate cho đòn tích lực</strong>.<br>
+            56% + 24% = 80% (trần crit rate).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-target"></i>Ba chỉ số mục tiêu (effective)</h2>
+          <div class="grid">
+            <div class="tg tg-crit">
+              <div class="tg-n">56%</div>
+              <div class="tg-lbl">chí mạng</div>
+              <div class="tg-raw">~81.2% trắng</div>
+            </div>
+            <div class="tg tg-aff">
+              <div class="tg-n">15.4%</div>
+              <div class="tg-lbl">Hiểu ý</div>
+              <div class="tg-raw">~22.3% trắng</div>
+            </div>
+            <div class="tg tg-prc">
+              <div class="tg-n">100%</div>
+              <div class="tg-lbl">Độ chính xác</div>
+              <div class="tg-raw">~116% trắng</div>
+            </div>
+          </div>
+          <div class="gloss">
+            <div class="gloss-row white-side">
+              <div class="gloss-term">Raw</div>
+              <div class="gloss-def">Chỉ số trắng — số trên gear</div>
+            </div>
+            <div class="gloss-row gold-side">
+              <div class="gloss-term">Effective</div>
+              <div class="gloss-def">Chỉ số vàng = trắng / (1 + kháng)</div>
+            </div>
+          </div>
+          <div class="note">Hiện tại kháng = 45% → chí mạng &amp; hiểu ý: vàng = trắng / 1.45. Độ chính xác có công thức riêng. Các bản cập nhật sau có thể tăng tỷ lệ kháng.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-flame"></i>Vì sao crit Mạc Đao mạnh gấp đôi</h2>
+          <div class="row"><span class="row-src">Bị động Mạc Đao (đòn tích lực)</span><span class="row-val">+10%</span></div>
+          <div class="row"><span class="row-src">Hiệu ứng bộ Rainwhispers</span><span class="row-val">+10%</span></div>
+          <div class="row"><span class="row-src">Rainwhispers khi khiên kích hoạt</span><span class="row-val">+15%</span></div>
+          <div class="row"><span class="row-src">Tâm pháp Adaptive Steel (đòn tích lực)</span><span class="row-val">+20%</span></div>
+          <div class="row"><span class="row-src">Tâm pháp Exquisite Scenery T5</span><span class="row-val">+4.4%</span></div>
+          <div class="row row-total"><span class="row-src">Tổng sát thương crit cộng thêm</span><span class="row-val">+109.4%</span></div>
+          <div class="note">Class khác chỉ được +50% sát thương khi crit. Mạc Đao gấp hơn 2 lần.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-chart-bar"></i>Sát thương trung bình mỗi đòn</h2>
+          <div class="dmg-r">
+            <span class="dmg-l">Đòn thường</span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:47.8%;background:linear-gradient(90deg,#5e564a,#8a7d68)"></div></div>
+            <span class="dmg-v">2.323</span>
+          </div>
+          <div class="dmg-r">
+            <span class="dmg-l">Hiểu ý</span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:84.6%;background:linear-gradient(90deg,#2c4a36,#6a9c7e)"></div></div>
+            <span class="dmg-v">4.105</span>
+          </div>
+          <div class="dmg-r">
+            <span class="dmg-l">chí mạng</span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:100%;background:linear-gradient(90deg,#5a1818,#b03d3a)"></div></div>
+            <span class="dmg-v">4.855</span>
+          </div>
+          <div class="compare">
+            <i class="ti ti-trophy"></i>
+            <div class="compare-text">
+              <strong>chí mạng &gt; Hiểu ý</strong> — crit hơn hiểu ý ~750 sát thương (~18% mạnh hơn). Đó là lý do crit luôn được ưu tiên cho Mạc Đao.
+            </div>
+          </div>
+          <div class="note">Bảng so sánh dựa trên tính toán chỉ số cố định lvl 81. Lvl 91 chênh lệch sẽ lớn hơn.<br>Crit lấy trung bình roll × hệ số 2.09. Hiểu ý luôn dùng max roll × 1.35.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-trending-up"></i>Ưu tiên chỉ số trang bị</h2>
+          <div class="pri">
+            <div class="pri-r"><span class="pri-n">1</span><span class="pri-t">Min thuộc tính khác</span><span class="tag tag-best">tốt nhất</span></div>
+            <div class="pri-r"><span class="pri-n">2</span><span class="pri-t">Max liệt thạch</span></div>
+            <div class="pri-r"><span class="pri-n">3</span><span class="pri-t">Min liệt thạch</span></div>
+            <div class="pri-r"><span class="pri-n">4</span><span class="pri-t">Max ngoại công</span></div>
+            <div class="pri-r"><span class="pri-n">5</span><span class="pri-t">Min ngoại công</span></div>
+            <div class="pri-r"><span class="pri-n">6</span><span class="pri-t">Max thuộc tính khác</span></div>
+            <div class="pri-r"><span class="pri-n">7</span><span class="pri-t">Phòng ngự / sinh lực tối đa</span><span class="tag tag-worst">tệ nhất</span></div>
+          </div>
+          <div class="note">Để hiểu thêm chi tiết, hãy bấm vào sidebar xem <strong>giải thích chỉ số tấn công</strong> nhé!</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page" id="page-general">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,150 L100,100 L180,130 L260,80 L340,115 L420,75 L500,105 L580,80 L680,105 L800,90 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,165 L80,135 L160,155 L240,120 L320,145 L400,125 L480,150 L560,130 L640,155 L740,140 L800,155 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">tất cả các phái</div>
+            <h1>Giải thích chỉ số tấn công</h1>
+            <div class="sub">Cách hệ thống stat hoạt động và cách roll gear hiệu quả cho mọi phái.</div>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-alert-triangle"></i>
+          <div class="warn-text">
+            <strong>Lưu ý:</strong> Bảng xếp hạng chỉ số sau chỉ nên được tham khảo khi chỉ số <strong>chí mạng / hiểu ý</strong> đã đạt mức optimal. Nếu chưa đạt ngưỡng crit, hãy ưu tiên cộng crit trước.
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-medal"></i>Tại sao min thuộc tính khác hệ = best</h2>
+
+          <div class="case-card case-best">
+            <div class="case-head">
+              <span class="case-num">1</span>
+              <span class="case-title">Min thuộc tính khác hệ</span>
+              <span class="tag tag-best">tốt nhất</span>
+            </div>
+            <div class="case-roll">+36.2 (max roll gear lvl 91) · hệ số 1.5× effective</div>
+            <div class="case-stats">
+              <div class="case-stat">
+                <div class="case-stat-lbl">Min</div>
+                <div class="case-stat-val">554.3</div>
+              </div>
+              <div class="case-stat">
+                <div class="case-stat-lbl">Max</div>
+                <div class="case-stat-val">1054.3</div>
+              </div>
+              <div class="case-stat highlight">
+                <div class="case-stat-lbl">Trung bình</div>
+                <div class="case-stat-val">804.3</div>
+              </div>
+            </div>
+            <div class="case-desc">
+              Khi <strong>min &gt; max</strong>, max bị đẩy lên bằng min — stat được tính cho <strong>cả min lẫn max</strong>. Đây là lý do dòng này hiệu quả nhất.
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">2</span>
+              <span class="case-title">Min/Max thuộc tính cùng hệ build</span>
+            </div>
+            <div class="case-roll">+36.2 · hệ số 2× effective (vd: dù quạt công build khiên ti)</div>
+            <div class="case-variants">
+              <div class="case-variant">
+                <span><strong>Min cùng hệ:</strong> 572.4 → 1000</span>
+                <span class="case-variant-val">avg 786.2</span>
+              </div>
+              <div class="case-variant">
+                <span><strong>Max cùng hệ:</strong> 500 → 1072.4</span>
+                <span class="case-variant-val">avg 786.2</span>
+              </div>
+            </div>
+            <div class="case-desc">
+              Công pháp luôn boost cùng hệ, nên <strong>min không bao giờ vượt max</strong>. Min và max ngang giá trị — yếu hơn case 1 vì không "nhân đôi" được.
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-head">
+              <span class="case-num">3</span>
+              <span class="case-title">Min/Max ngoại công</span>
+            </div>
+            <div class="case-roll">+63.8 (max roll, cao hơn vì chỉ x1 effective)</div>
+            <div class="case-variants">
+              <div class="case-variant">
+                <span><strong>Min ngoại công:</strong> 563.8 → 1000</span>
+                <span class="case-variant-val">avg 781.9</span>
+              </div>
+              <div class="case-variant">
+                <span><strong>Max ngoại công:</strong> 500 → 1063.8</span>
+                <span class="case-variant-val">avg 781.9</span>
+              </div>
+            </div>
+            <div class="case-desc">
+              Số trên gear cao hơn nhưng chỉ tính <strong>×1 effective</strong>. Tổng sát thương trung bình thấp hơn cùng hệ.
+            </div>
+          </div>
+
+          <div class="case-card case-worst">
+            <div class="case-head">
+              <span class="case-num">4</span>
+              <span class="case-title">Max thuộc tính khác hệ</span>
+              <span class="tag tag-worst">tệ nhất</span>
+            </div>
+            <div class="case-roll">+36.2 · hệ số 1.5× effective</div>
+            <div class="case-variants">
+              <div class="case-variant">
+                <span><strong>Case A:</strong> min khác hệ &gt; max → bị overwrite, lãng phí</span>
+                <span class="case-variant-val">+0</span>
+              </div>
+              <div class="case-variant">
+                <span><strong>Case B:</strong> max khác hệ &gt; min → 500 → 1054.3</span>
+                <span class="case-variant-val">avg 777.15</span>
+              </div>
+            </div>
+            <div class="case-desc">
+              Nên <strong>reroll</strong> dòng này. Nếu món đồ ra <strong>2 dòng max khác hệ</strong>, hãy bỏ luôn món đó.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-chart-bar"></i>So sánh sát thương trung bình</h2>
+          <div class="summary-bars">
+            <div>
+              <div class="sb-label"><span class="sb-rank">1</span>Min thuộc tính khác hệ</div>
+              <div class="sb-row">
+                <div class="sb-bar"><div class="sb-fill" style="width:100%;background:linear-gradient(90deg,#2c4a36,#6a9c7e)">+27 dmg</div></div>
+                <div class="sb-val">804.3</div>
+              </div>
+            </div>
+            <div>
+              <div class="sb-label"><span class="sb-rank">2</span>Min/Max cùng hệ</div>
+              <div class="sb-row">
+                <div class="sb-bar"><div class="sb-fill" style="width:33.3%;background:linear-gradient(90deg,#8a7338,#c9a86a)">+9 dmg</div></div>
+                <div class="sb-val">786.2</div>
+              </div>
+            </div>
+            <div>
+              <div class="sb-label"><span class="sb-rank">3</span>Min/Max ngoại công</div>
+              <div class="sb-row">
+                <div class="sb-bar"><div class="sb-fill" style="width:17.5%;background:linear-gradient(90deg,#5e564a,#8a7d68)"></div></div>
+                <div class="sb-val">781.9</div>
+              </div>
+            </div>
+            <div>
+              <div class="sb-label"><span class="sb-rank">4</span>Max thuộc tính khác hệ</div>
+              <div class="sb-row">
+                <div class="sb-bar"><div class="sb-fill" style="width:0%;background:#5a1818"></div></div>
+                <div class="sb-val">777.15</div>
+              </div>
+            </div>
+          </div>
+          <div class="note">Bar hiển thị chênh lệch sát thương trung bình so với case tệ nhất (777.15). Tính trên base 500-1000, gear lvl 91, max roll một dòng đơn lẻ.</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const navItems = document.querySelectorAll('.nav-item');
+  const pages = document.querySelectorAll('.page');
+  const sidebar = document.getElementById('sidebar');
+  const scrim = document.getElementById('scrim');
+  const hamburger = document.getElementById('hamburger');
+
+  navItems.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const page = btn.dataset.page;
+      navItems.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      pages.forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + page).classList.add('active');
+      sidebar.classList.remove('open');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+  scrim.addEventListener('click', () => sidebar.classList.remove('open'));
+
+  document.querySelectorAll('.toc-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.goto;
+      const navBtn = document.querySelector(`.nav-item[data-page="${target}"]`);
+      if (navBtn) navBtn.click();
+    });
+  });
+</script>
+</body>
+</html>
