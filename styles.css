@@ -21,6 +21,17 @@
   --cinnabar-bright: #d6695a;
   --cinnabar-deep: #5a1818;
 
+  /* Stat identity colors (NOT rank quality):
+     crit = chí mạng → yellow. aff = hiểu ý → orange.
+     Don't reuse cinnabar/jade for these stats — those are reserved for
+     best/worst rank cues (case-best, case-worst, tag-best, tag-worst, rank bars). */
+  --crit: #d4ad2e;
+  --crit-bright: #f0c83a;
+  --crit-deep: #3e3010;
+  --aff: #c46d2e;
+  --aff-bright: #e88e4e;
+  --aff-deep: #3e1e10;
+
   --silk: #f0e6d2;
   --paper: #e8dcc4;
   --bone: #c9beac;
@@ -182,6 +193,30 @@ body::before {
 }
 .nav-item.active .nav-item-sub { color: var(--gold-deep); }
 
+.nav-group { display: flex; flex-direction: column; }
+.nav-group-toggle { align-items: center; }
+.nav-chevron {
+  margin-left: auto;
+  font-size: 16px !important;
+  color: var(--gold-deep) !important;
+  margin-top: 0 !important;
+  transition: transform 0.25s ease;
+}
+.nav-group.open .nav-chevron { transform: rotate(180deg); color: var(--gold) !important; }
+.nav-children {
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  margin: 4px 0 6px 22px;
+  padding-left: 12px;
+  border-left: 1px solid var(--ink-border);
+}
+.nav-group.open .nav-children { display: flex; }
+.nav-child { padding: 10px 12px; }
+.nav-child .nav-item-title { font-size: 13px; }
+.nav-child .nav-item-sub { font-size: 10px; }
+.nav-child i { font-size: 16px; }
+
 .sidebar-footer {
   padding: 24px 26px 28px;
   font-size: 10px;
@@ -330,14 +365,14 @@ h2 i {
 
 /* === Key card === */
 .key-card {
-  background: linear-gradient(180deg, rgba(176, 61, 58, 0.12), transparent), var(--cinnabar-deep);
+  background: linear-gradient(180deg, rgba(240, 200, 58, 0.10), transparent), var(--crit-deep);
   border: 1px solid var(--gold);
   border-radius: 6px;
   padding: 32px 26px;
   margin-bottom: 16px;
   text-align: center;
   position: relative;
-  box-shadow: inset 0 0 0 1px rgba(201, 168, 106, 0.15), 0 4px 24px rgba(176, 61, 58, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(201, 168, 106, 0.15), 0 4px 24px rgba(240, 200, 58, 0.12);
 }
 .key-card::before, .key-card::after {
   content: '';
@@ -436,20 +471,20 @@ h2 i {
 }
 
 .tg-crit {
-  background: linear-gradient(180deg, var(--cinnabar-deep), #3a0e0e);
-  border-color: var(--cinnabar);
+  background: linear-gradient(180deg, var(--crit-deep), #2a2008);
+  border-color: var(--crit);
 }
 .tg-crit .tg-n { color: var(--silk); }
-.tg-crit .tg-lbl { color: var(--cinnabar-bright); }
-.tg-crit .tg-raw { color: #d6a89a; }
+.tg-crit .tg-lbl { color: var(--crit-bright); }
+.tg-crit .tg-raw { color: #d6c490; }
 
 .tg-aff {
-  background: linear-gradient(180deg, var(--jade-deep), #1a2e22);
-  border-color: var(--jade);
+  background: linear-gradient(180deg, var(--aff-deep), #2a1408);
+  border-color: var(--aff);
 }
 .tg-aff .tg-n { color: var(--silk); }
-.tg-aff .tg-lbl { color: var(--jade-bright); }
-.tg-aff .tg-raw { color: #b8d4c0; }
+.tg-aff .tg-lbl { color: var(--aff-bright); }
+.tg-aff .tg-raw { color: #d6b090; }
 
 .tg-prc {
   background: linear-gradient(180deg, #f5ecd8, #e0d2b4);
@@ -504,7 +539,7 @@ h2 i {
 .row-total .row-src { color: var(--silk); font-weight: 500; font-family: 'Noto Serif Display', serif; }
 .row-total .row-val {
   font-size: 19px;
-  color: var(--cinnabar-bright);
+  color: var(--crit-bright);
 }
 
 .pri { display: flex; flex-direction: column; gap: 8px; }
@@ -698,6 +733,8 @@ h2 i {
 .case-stat.highlight .case-stat-val { color: var(--gold-bright); }
 .case-best .case-stat.highlight { border-color: var(--jade); }
 .case-best .case-stat.highlight .case-stat-val { color: var(--jade-bright); }
+.case-worst .case-stat.highlight { border-color: var(--cinnabar); }
+.case-worst .case-stat.highlight .case-stat-val { color: var(--cinnabar-bright); }
 
 .case-desc {
   font-size: 12px;
@@ -706,32 +743,6 @@ h2 i {
   margin-top: 10px;
 }
 .case-desc strong { color: var(--silk); font-weight: 500; }
-
-.case-variants {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 12px 0;
-}
-.case-variant {
-  background: var(--ink-card);
-  border: 1px solid var(--ink-border);
-  border-radius: 4px;
-  padding: 10px 14px;
-  font-size: 12px;
-  color: var(--text-ivory);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-.case-variant strong { color: var(--silk); font-weight: 500; }
-.case-variant-val {
-  color: var(--gold-bright);
-  font-weight: 500;
-  flex-shrink: 0;
-  font-family: 'Noto Serif Display', serif;
-}
 
 .summary-bars { display: flex; flex-direction: column; gap: 12px; }
 .sb-row {
@@ -797,6 +808,234 @@ h2 i {
   font-weight: 500;
   text-align: right;
 }
+
+/* === Damage flow infographic === */
+.dmg-flow-intro {
+  font-size: 13px;
+  color: var(--text-ivory);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.dmg-flow-intro strong { color: var(--silk); font-weight: 500; }
+.dmg-flow-wrap {
+  margin: 4px -10px 14px;
+  padding: 14px 10px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), transparent);
+  border-radius: 6px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.dmg-flow {
+  width: 100%;
+  min-width: 580px;
+  height: auto;
+  display: block;
+}
+.dmg-flow-branches {
+  opacity: 0.85;
+}
+.dmg-flow-title-text {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  fill: var(--silk);
+}
+.dmg-flow-formula-text {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 13px;
+  fill: var(--text-muted);
+  font-style: italic;
+}
+.dmg-flow-attack .dmg-flow-title-text { fill: var(--gold-bright); }
+
+.dmg-example {
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.dmg-example:last-of-type { margin-bottom: 6px; }
+.dmg-example-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--ink-border);
+  flex-wrap: wrap;
+}
+.dmg-example-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--ink-card);
+  border: 1px solid var(--gold-deep);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold);
+  font-family: 'Noto Serif Display', serif;
+  flex-shrink: 0;
+}
+.dmg-example-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+  color: var(--text-ivory);
+}
+.dmg-example-inputs strong {
+  color: var(--gold-bright);
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 500;
+  font-style: italic;
+  margin-right: 2px;
+}
+.dmg-example-inputs .dmg-example-derived strong { color: var(--silk); }
+.dmg-example .dmg-r {
+  grid-template-columns: 130px 1fr 50px;
+}
+.dmg-example .dmg-r:last-child { margin-bottom: 0; }
+
+/* === Class-icon images (replaces ti-* glyphs for class-branded entries) === */
+.nav-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0;
+  display: block;
+}
+.toc-item .nav-icon-img { width: 28px; height: 28px; }
+
+/* === Martial-art cards (Công pháp) === */
+.martial-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.martial-image-wrap {
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+}
+.martial-image { display: block; width: 100%; height: auto; }
+.martial-content > h2:first-child { margin-top: 0; }
+
+.skill-block {
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--ink-border);
+}
+.skill-block:last-child { border-bottom: none; padding-bottom: 0; }
+.skill-block:first-of-type { padding-top: 4px; }
+.skill-name {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gold-bright);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.02em;
+}
+.skill-name::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.skill-block p {
+  font-size: 13px;
+  color: var(--text-ivory);
+  line-height: 1.7;
+}
+.skill-block p strong { color: var(--silk); font-weight: 500; }
+
+.skill-list { list-style: none; padding: 0; margin: 0; }
+.skill-list li {
+  position: relative;
+  padding: 5px 0 5px 18px;
+  font-size: 13px;
+  color: var(--text-ivory);
+  line-height: 1.7;
+}
+.skill-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  color: var(--gold-deep);
+  font-size: 9px;
+}
+.skill-list strong { color: var(--silk); font-weight: 500; }
+
+/* === Damage formula grid (Sát thương đầu ra) === */
+.dmg-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 16px 0 8px;
+}
+.dmg-formula {
+  padding: 16px 14px;
+  border-radius: 4px;
+  border: 1px solid;
+  text-align: center;
+}
+.dmg-formula-name {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.dmg-formula-eq {
+  font-size: 12px;
+  color: var(--text-ivory);
+  line-height: 1.6;
+}
+.dmg-formula-eq strong { color: var(--silk); font-weight: 500; }
+
+.dmg-formula-crit {
+  background: linear-gradient(180deg, var(--crit-deep), #2a2008);
+  border-color: var(--crit);
+}
+.dmg-formula-crit .dmg-formula-name { color: var(--crit-bright); }
+
+.dmg-formula-aff {
+  background: linear-gradient(180deg, var(--aff-deep), #2a1408);
+  border-color: var(--aff);
+}
+.dmg-formula-aff .dmg-formula-name { color: var(--aff-bright); }
+
+.dmg-formula-normal {
+  background: var(--ink-card-2);
+  border-color: var(--ink-border);
+}
+.dmg-formula-normal .dmg-formula-name { color: var(--silk); }
+
+.dmg-formula-abrasion {
+  background: var(--ink-card-2);
+  border-color: var(--ink-border);
+  opacity: 0.85;
+}
+.dmg-formula-abrasion .dmg-formula-name { color: var(--bone); }
+
+/* === Inline stat-term highlighters (color-codes the words "chí mạng" / "hiểu ý" wherever they appear in body text). Defined late so source-order ties resolve in their favor against single-class component rules. === */
+.term-crit { color: var(--crit-bright); }
+.term-aff { color: var(--aff-bright); }
+.dmg-flow-muted .dmg-flow-title-text { fill: var(--text-muted); }
+.dmg-flow-crit .dmg-flow-title-text { fill: var(--crit-bright); }
+.dmg-flow-aff .dmg-flow-title-text { fill: var(--aff-bright); }
+.dmg-flow-abrasion .dmg-flow-title-text { fill: var(--bone); }
 
 /* === Intro page === */
 .preface-card p {
@@ -874,4 +1113,51 @@ h2 i {
   h1 { font-size: 28px; }
   .key-num { font-size: 52px; }
   .hero { padding: 36px 18px 30px; }
+}
+
+@media (max-width: 480px) {
+  /* Case-stats 3-column → 1-column on phones (4 cards on Chỉ số tấn công) */
+  .case-stats { grid-template-columns: 1fr; gap: 6px; }
+
+  /* Damage-example probability bars: stack label above bar+value
+     so "Sát thương yếu" doesn't eat all the bar width */
+  .dmg-example .dmg-r {
+    grid-template-columns: 1fr 50px;
+    grid-template-areas:
+      "label label"
+      "bar   value";
+    row-gap: 4px;
+  }
+  .dmg-example .dmg-l { grid-area: label; }
+  .dmg-example .dmg-tk { grid-area: bar; }
+  .dmg-example .dmg-v { grid-area: value; }
+
+  /* Affordance: hint that the damage-flow SVG scrolls horizontally */
+  .dmg-flow-wrap::after {
+    content: '← lướt ngang →';
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--text-faint);
+    margin-top: 4px;
+  }
+
+  /* Tighter card padding for narrow phones */
+  .card { padding: 18px 16px; }
+  .case-card { padding: 14px 14px; }
+  .dmg-example { padding: 14px 14px; }
+  .dmg-example-head { gap: 10px; padding-bottom: 10px; margin-bottom: 10px; }
+
+  /* Smaller headings + key number; tighter hero */
+  h1 { font-size: 24px; }
+  .key-num { font-size: 44px; }
+  .hero { padding: 28px 14px 24px; }
+
+  /* Martial-art cards: stack image above text on phones */
+  .martial-card { grid-template-columns: 1fr; gap: 14px; }
+  .martial-image-wrap { max-width: 220px; margin: 0 auto; }
+
+  /* Damage-formula grid: 2-up → 1-up on phones */
+  .dmg-formula-grid { grid-template-columns: 1fr; }
 }
