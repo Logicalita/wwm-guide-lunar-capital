@@ -115,6 +115,13 @@ body::before {
   font-weight: 500;
   margin-bottom: 6px;
 }
+.sidebar-logo-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
 .sidebar-title {
   font-family: 'Noto Serif Display', serif;
   font-size: 22px;
@@ -931,6 +938,190 @@ h2 i {
 .attr-rec-text strong { color: var(--gold-bright); font-weight: 500; }
 @media (max-width: 720px) {
   .attr-rec-row { grid-template-columns: 1fr; gap: 6px; padding: 10px 14px; }
+}
+
+/* "Lunar Capital" branded gradient (matches logo pastel palette) */
+.lc-grad {
+  background: linear-gradient(135deg, #f5b9d6 0%, #b8e7d5 28%, #b9d6f0 55%, #d2c0e8 80%, #f5cdb3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: inherit;
+}
+
+/* Inline link button used inside paragraphs (acts like a text link, behaves like a [data-goto] nav trigger) */
+.inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--gold-bright);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-deep);
+  text-underline-offset: 2px;
+}
+.inline-link:hover { color: var(--silk); text-decoration-color: var(--gold-bright); }
+
+/* === Guild page === */
+#page-guild .guild-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+#page-guild .guild-feature {
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#page-guild .guild-feature i { font-size: 24px; color: var(--gold-bright); }
+#page-guild .guild-feature h3 {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--silk);
+  margin: 0;
+}
+#page-guild .guild-feature p {
+  font-size: 12px;
+  color: var(--text-ivory);
+  line-height: 1.6;
+  margin: 0;
+}
+
+#page-guild .guild-giveaway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+#page-guild .guild-giveaway {
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+  border-left: 3px solid var(--gold-bright);
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#page-guild .guild-giveaway i { font-size: 22px; color: var(--gold-bright); }
+#page-guild .guild-giveaway h3 {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--silk);
+  margin: 0;
+}
+#page-guild .guild-giveaway p {
+  font-size: 12px;
+  color: var(--text-ivory);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.guild-schedule-list { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.guild-schedule-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 110px;
+  gap: 16px;
+  padding: 10px 14px;
+  align-items: center;
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+  border-left: 3px solid var(--gold-deep);
+  border-radius: 4px;
+}
+.guild-schedule-day {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'Noto Serif Display', serif;
+}
+.guild-schedule-event {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--silk);
+}
+.guild-schedule-time {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 13px;
+  color: var(--gold-bright);
+  text-align: right;
+}
+
+#page-guild .guild-discord {
+  background: var(--ink-card-2);
+  border: 1px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#page-guild .guild-discord-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+#page-guild .guild-discord a {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+#page-guild .guild-discord a.lc-grad:hover {
+  filter: brightness(1.15);
+}
+#page-guild .guild-discord .serial {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+#page-guild .guild-discord .cta {
+  font-size: 12px;
+  color: var(--text-ivory);
+  margin-top: 2px;
+}
+#page-guild .guild-discord-qr {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 6px;
+  display: block;
+}
+@media (max-width: 720px) {
+  #page-guild .guild-discord {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  #page-guild .guild-discord-qr {
+    width: 140px;
+    height: 140px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  #page-guild .guild-features { grid-template-columns: 1fr; }
+  #page-guild .guild-giveaway-grid { grid-template-columns: 1fr; }
+  .guild-schedule-row { grid-template-columns: 1fr; gap: 4px; }
+  .guild-schedule-time { text-align: left; }
 }
 
 .case-desc {

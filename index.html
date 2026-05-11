@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where Winds Meet · Build Guide VN</title>
+<title>Lunar Capital GuideBook</title>
+<link rel="icon" type="image/png" href="images/shared/logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260511">
+<link rel="stylesheet" href="styles.css?v=20260512-3">
 </head>
 <body>
 
@@ -18,8 +19,8 @@
 
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-logo">where winds meet</div>
-      <div class="sidebar-title">Build Guide</div>
+      <img src="images/shared/logo.png" alt="Lunar Capital" class="sidebar-logo-img">
+      <div class="sidebar-title"><span class="lc-grad">Lunar Capital</span> GuideBook</div>
       <div class="sidebar-flourish"><span></span><span class="dot"></span><span></span></div>
     </div>
     <div class="sidebar-section-label">Mục lục</div>
@@ -29,6 +30,13 @@
         <div class="nav-item-content">
           <div class="nav-item-title">Lời mở đầu</div>
           <div class="nav-item-sub">Giới thiệu &amp; mục lục</div>
+        </div>
+      </button>
+      <button class="nav-item" data-page="guild">
+        <i class="ti ti-users-group"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Guild <span class="lc-grad">Lunar Capital</span></div>
+          <div class="nav-item-sub">Cộng đồng &amp; lịch hoạt động</div>
         </div>
       </button>
       <div class="nav-group" id="nav-group-tank">
@@ -168,17 +176,18 @@
           </svg>
           <div class="hero-content">
             <div class="eye">lời mở đầu</div>
-            <h1>Guide xây dựng nhân vật</h1>
-            <div class="sub">Tổng hợp thông tin chỉ số dành cho anh chị em trong guild — bằng tiếng Việt.</div>
+            <h1>GuideBook dành cho <span class="lc-grad">Lunar Capital</span></h1>
+            <div class="sub">Guide xây dựng nhân vật — dự án tổng hợp của các thành viên kỳ cựu trong guild, viết bằng tiếng Việt.</div>
           </div>
         </div>
 
         <div class="card preface-card">
-          <h2><i class="ti ti-quote"></i>Vì sao có guide này</h2>
+          <h2><i class="ti ti-quote"></i>Về guide này</h2>
           <p>Chào anh chị em.</p>
-          <p>Mình chơi tank đã khá lâu, nhưng phải thừa nhận là nhiều lần <strong>hiểu sai về chỉ số</strong> — roll gear xong vẫn không lý giải được tại sao DPS lúc cao lúc thấp, hoặc tin theo những guide chung chung mà không phù hợp với class mình đang dùng.</p>
-          <p>Sau một thời gian lội qua các post từ cộng đồng quốc tế, CN, kết hợp test trực tiếp trên dummy, mình quyết định ngồi lại tổng hợp thành guide này — viết bằng tiếng Việt, dành riêng cho anh chị em trong guild dùng tham khảo.</p>
-          <p>Build sẽ tốt hơn nếu mình cùng nhau hoàn thiện. Mọi người có góp ý, thông tin mới hoặc phát hiện sai sót gì, <strong>cứ nhắn cho mình</strong> để cập nhật nhé.</p>
+          <p>Chúng tôi là <strong>Guild <span class="lc-grad">Lunar Capital</span></strong> — cộng đồng game thủ Where Winds Meet thân thiện, hoạt động đa dạng, không ràng buộc KPI. Guide này là dự án tổng hợp của nhiều thành viên kỳ cựu trong guild — mỗi class/build do người chơi chuyên môn của class đó đảm nhiệm.</p>
+          <p>Toàn bộ chỉ số, công pháp, tâm pháp, trang bị đều được test trực tiếp trên dummy và đối chiếu với cộng đồng quốc tế lẫn CN. Mục tiêu là một guide tiếng Việt đầy đủ và đáng tin cậy — anh chị em không cần lội post nước ngoài, chỉ cần đọc và áp dụng.</p>
+          <p>Guidebook sẽ tiếp tục phát triển miễn là guild còn tồn tại — sắp tới sẽ có thêm guide cho nhiều class DPS khác. Anh chị em theo dõi để cập nhật nhé.</p>
+          <p>Nếu thấy hay và muốn cùng tham gia cộng đồng, ghé thăm <button class="inline-link" data-goto="guild">trang Guild <span class="lc-grad">Lunar Capital</span></button> để xem hoạt động hàng tuần và Discord của bọn mình.</p>
         </div>
 
         <div class="card">
@@ -214,8 +223,115 @@
         <div class="warn-card">
           <i class="ti ti-message-circle"></i>
           <div class="warn-text">
-            <strong>Góp ý &amp; feedback:</strong> Nếu anh chị em phát hiện sai sót, có data mới, hoặc muốn thêm class/build khác — cứ nhắn trực tiếp cho mình. Guide này là của chung, mình sẽ cập nhật vào bản mới.
+            <strong>Góp ý &amp; feedback:</strong> Nếu phát hiện sai sót, có data mới, hoặc muốn thêm class/build khác — cứ nhắn vào Discord guild (<a href="https://dsc.gg/lunarcapital" target="_blank" rel="noopener">dsc.gg/lunarcapital</a>). Guide này là của chung — sẽ được cập nhật vào bản mới.
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD LUNAR CAPITAL -->
+    <section class="page" id="page-guild">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Cộng đồng</div>
+            <h1>Guild <span class="lc-grad">Lunar Capital</span></h1>
+            <div class="sub">Tìm thành viên — guild Where Winds Meet thân thiện, không KPI, hoạt động đa dạng hàng tuần.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-stars"></i>Vì sao chọn <span class="lc-grad">Lunar Capital</span>?</h2>
+          <div class="guild-features">
+            <div class="guild-feature">
+              <i class="ti ti-yoga"></i>
+              <h3>Ưu tiên tân thủ</h3>
+              <p>Cộng đồng thân thiện · Không ràng buộc KPI · Chỉ cần có Discord.</p>
+            </div>
+            <div class="guild-feature">
+              <i class="ti ti-swords"></i>
+              <h3>Triển mọi hoạt động</h3>
+              <p>Các chuyên mục boss, talent và bang chiến hàng tuần — đầy đủ nội dung end-game.</p>
+            </div>
+            <div class="guild-feature">
+              <i class="ti ti-gift"></i>
+              <h3>Sự kiện nhận quà</h3>
+              <p>Event tặng quà mỗi tháng cho thành viên gắn bó, đồng hành lâu dài cùng guild.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-gift"></i>Sự kiện nhận quà hàng tháng</h2>
+          <p class="dmg-flow-intro">2 giveaway Battle Pass mỗi tháng dành cho thành viên gắn bó:</p>
+          <div class="guild-giveaway-grid">
+            <div class="guild-giveaway">
+              <i class="ti ti-flower"></i>
+              <h3>Battle Pass cho Healer</h3>
+              <p>1 suất Battle Pass mỗi tháng dành riêng cho thành viên main healer trong guild.</p>
+            </div>
+            <div class="guild-giveaway">
+              <i class="ti ti-swords"></i>
+              <h3>Battle Pass cho Bang chiến</h3>
+              <p>1 suất Battle Pass mỗi tháng cho thành viên tham gia Bang chiến 30v30.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-calendar-week"></i>Lịch hoạt động hàng tuần</h2>
+          <div class="guild-schedule-list">
+            <div class="guild-schedule-row">
+              <div class="guild-schedule-day">Thứ 2 / 4 / 6</div>
+              <div class="guild-schedule-event">Hero's Realm</div>
+              <div class="guild-schedule-time">13:00 – 21:00</div>
+            </div>
+            <div class="guild-schedule-row">
+              <div class="guild-schedule-day">Thứ 3 &amp; 5</div>
+              <div class="guild-schedule-event">Breaking Army</div>
+              <div class="guild-schedule-time">20:30</div>
+            </div>
+            <div class="guild-schedule-row">
+              <div class="guild-schedule-day">Thứ 3 &amp; 5</div>
+              <div class="guild-schedule-event">Show Down</div>
+              <div class="guild-schedule-time">21:00</div>
+            </div>
+            <div class="guild-schedule-row">
+              <div class="guild-schedule-day">Thứ 7 &amp; CN</div>
+              <div class="guild-schedule-event">Bang chiến 30v30</div>
+              <div class="guild-schedule-time">19:15</div>
+            </div>
+            <div class="guild-schedule-row">
+              <div class="guild-schedule-day">Hàng ngày</div>
+              <div class="guild-schedule-event">Guild Party</div>
+              <div class="guild-schedule-time">22:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-brand-discord"></i>Tham gia <span class="lc-grad">Lunar Capital</span></h2>
+          <div class="guild-discord">
+            <div class="guild-discord-text">
+              <a href="https://dsc.gg/lunarcapital" target="_blank" rel="noopener" class="lc-grad">dsc.gg/lunarcapital</a>
+              <div class="serial">Discord serial: 10237255</div>
+              <div class="cta">Vào Discord, ping @recruit để được duyệt vào guild.</div>
+            </div>
+            <img src="images/shared/linkbreakers-io-qr-code-generator.svg" alt="QR Discord Lunar Capital" class="guild-discord-qr">
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-device-gamepad-2"></i>Giải trí khác</h2>
+          <p style="font-size:13px;color:var(--text-ivory);line-height:1.6;margin:0;">
+            Ngoài Where Winds Meet, các thành viên trong guild còn cùng nhau chơi <strong>TFT</strong>, <strong>League of Legends</strong>, và các tựa game khác — tham gia khi nào tiện.
+          </p>
         </div>
 
       </div>
@@ -1259,7 +1375,7 @@
   hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
   scrim.addEventListener('click', () => sidebar.classList.remove('open'));
 
-  document.querySelectorAll('.toc-item').forEach(btn => {
+  document.querySelectorAll('[data-goto]').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.goto;
       const navBtn = document.querySelector(`.nav-item[data-page="${target}"]`);
