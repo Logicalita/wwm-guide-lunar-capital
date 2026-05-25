@@ -22,3 +22,6 @@ Static Vietnamese-language build guide for the game **Where Winds Meet** (Mạc 
 ## Workflow
 - Edit `index.html` and `styles.css` directly. There is no preview server beyond opening the file in a browser.
 - Follow the global `<HOME>/ai-optimizer/AGENTS.md` loop: plan → research → build → record. Query `memory/index.json` first.
+
+## Sources of Truth
+For any combat-math claim (damage formula, conversion rates, hit resolution, caps, penetration), read **`KNOWLEDGE.md` → "Sources of Truth"** before editing. Priority: (1) in-game tests in this repo > (2) wherewindsmeetcalculator.com/wiki/ > (3) Chinese community sources > (4) English aggregated wikis. Fextralife is **not trusted** for mechanics on this game.

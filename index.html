@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260512-3">
+<link rel="stylesheet" href="styles.css?v=20260525-9">
 </head>
 <body>
 
@@ -49,6 +49,13 @@
           <i class="ti ti-chevron-down nav-chevron"></i>
         </button>
         <div class="nav-children">
+          <button class="nav-item nav-child" data-page="tank-tongquan">
+            <i class="ti ti-map-2"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tổng quan</div>
+              <div class="nav-item-sub">Mục lục guide Tank</div>
+            </div>
+          </button>
           <button class="nav-item nav-child" data-page="tank-chiso">
             <i class="ti ti-target"></i>
             <div class="nav-item-content">
@@ -63,14 +70,14 @@
               <div class="nav-item-sub">Căn cơ trường phái</div>
             </div>
           </button>
-          <button class="nav-item nav-child" data-page="tank-tampphap">
+          <button class="nav-item nav-child is-hidden" data-page="tank-tampphap">
             <i class="ti ti-flame"></i>
             <div class="nav-item-content">
               <div class="nav-item-title">Tâm pháp</div>
               <div class="nav-item-sub">Tuyệt học</div>
             </div>
           </button>
-          <button class="nav-item nav-child" data-page="tank-trangbi">
+          <button class="nav-item nav-child is-hidden" data-page="tank-trangbi">
             <i class="ti ti-sword"></i>
             <div class="nav-item-content">
               <div class="nav-item-title">Trang bị</div>
@@ -79,7 +86,7 @@
           </button>
         </div>
       </div>
-      <div class="nav-group" id="nav-group-heal">
+      <div class="nav-group is-hidden" id="nav-group-heal">
         <button class="nav-item nav-group-toggle" aria-expanded="false">
           <i class="ti ti-flower"></i>
           <div class="nav-item-content">
@@ -158,6 +165,53 @@
           </button>
         </div>
       </div>
+      <div class="nav-group" id="nav-group-guildwar">
+        <button class="nav-item nav-group-toggle" aria-expanded="false">
+          <i class="ti ti-swords"></i>
+          <div class="nav-item-content">
+            <div class="nav-item-title">Guild War</div>
+            <div class="nav-item-sub">Bang chiến 30v30</div>
+          </div>
+          <i class="ti ti-chevron-down nav-chevron"></i>
+        </button>
+        <div class="nav-children">
+          <button class="nav-item nav-child" data-page="guildwar">
+            <i class="ti ti-map-2"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tổng quan</div>
+              <div class="nav-item-sub">Mục lục Guild War</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="guildwar-doihinh">
+            <i class="ti ti-users-group"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Phân tích đội hình</div>
+              <div class="nav-item-sub">Team Công · Team Thủ</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="guildwar-loichoi">
+            <i class="ti ti-route"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Lối chơi cơ bản</div>
+              <div class="nav-item-sub">5 phút đầu · Giữa trận</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="guildwar-tricks">
+            <i class="ti ti-bulb"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Mẹo &amp; Thủ thuật</div>
+              <div class="nav-item-sub">Tricks &amp; Tips</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="guildwar-tune">
+            <i class="ti ti-adjustments"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tune &amp; Kỳ thuật</div>
+              <div class="nav-item-sub">Ưu tiên tune đồ</div>
+            </div>
+          </button>
+        </div>
+      </div>
     </nav>
     <div class="sidebar-footer">phiên bản tiếng việt</div>
   </aside>
@@ -201,7 +255,7 @@
               </div>
               <i class="ti ti-chevron-right toc-arrow"></i>
             </button>
-            <button class="toc-item" data-goto="heal-chiso">
+            <button class="toc-item is-hidden" data-goto="heal-chiso">
               <i class="ti ti-flower toc-icon"></i>
               <div class="toc-content">
                 <div class="toc-title">Guide Healer thần (Silkbind-Deluge)</div>
@@ -332,6 +386,122 @@
           <p style="font-size:13px;color:var(--text-ivory);line-height:1.6;margin:0;">
             Ngoài Where Winds Meet, các thành viên trong guild còn cùng nhau chơi <strong>TFT</strong>, <strong>League of Legends</strong>, và các tựa game khác — tham gia khi nào tiện.
           </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ TANK · TỔNG QUAN -->
+    <section class="page tank-tongquan" id="page-tank-tongquan">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Tổng quan</div>
+            <h1>Guide top DPS Tank — Mạc Đao</h1>
+            <div class="sub">Stonesplit-Might · Mục lục, mục tiêu build, và lối chơi cốt lõi.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-flame"></i>Tâm pháp — 2 bộ recommend</h2>
+          <div class="tq-2col">
+            <figure>
+              <img src="images/tank/inner-set-1.png" alt="">
+              <figcaption><strong>Set 1</strong> — Shield dài hơn, tăng khả năng sống sót, recommend cho mọi nhà.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/tank/inner-set-2.png" alt="">
+              <figcaption><strong>Set 2</strong> — Dmg to hơn, mỏng hơn, dành cho player kinh nghiệm.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-sword"></i>Set vũ khí</h2>
+          <figure>
+            <img src="images/tank/rainwhispers.png" alt="">
+            <figcaption>Bộ Thời Vũ (Rainwhispers) — tăng 25% sát thương <span class="term-crit">chí mạng</span>.</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-shield"></i>Set áo giáp</h2>
+          <div class="tq-or-row">
+            <figure>
+              <img src="images/tank/dich-tuong.png" alt="">
+              <figcaption>Bộ Dịch Tương</figcaption>
+            </figure>
+            <div class="tq-or">hoặc</div>
+            <figure>
+              <img src="images/tank/quy-nguyet.png" alt="">
+              <figcaption>Bộ Quý Nguyệt</figcaption>
+            </figure>
+          </div>
+          <div class="note" style="margin-top:10px">
+            <strong>Best:</strong> set tăng thời gian shield và giảm sát thương (<em>Dịch Tương</em>), hoặc set mặc định tạo shield (<em>Quý Nguyệt</em>).
+          </div>
+        </div>
+
+        <div class="key-card">
+          <span class="key-badge">Mục tiêu chính</span>
+          <div class="key-num">56%</div>
+          <div class="key-lbl">Effective <span class="term-crit">chí mạng</span> từ gear</div>
+          <div class="key-desc">
+            Chỉ cần <strong>56% effective crit</strong> (chỉ số vàng) từ trang bị &amp; công pháp — bị động Mạc Đao đã cộng thêm <strong>+24% crit rate</strong> cho đòn tích lực, đẩy tổng lên <strong>80%</strong> (hard cap).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-table"></i>Chỉ số recommended — cấp thế giới 14</h2>
+          <div class="row"><span class="row-src">Độ chính xác</span><span class="row-val">100%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-crit">chí mạng</span></span><span class="row-val">56%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-aff">hiểu ý</span></span><span class="row-val">15.4%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-crit">chí mạng</span> trực tiếp</span><span class="row-val">4.6%</span></div>
+          <div class="row"><span class="row-src">Công kích vật lý</span><span class="row-val">1300 – 2200</span></div>
+          <div class="row"><span class="row-src">Công kích thuộc tính</span><span class="row-val">350 – 750</span></div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-book-2"></i>Nội dung guide</h2>
+          <div class="toc">
+            <button class="toc-item" data-goto="tank-chiso">
+              <i class="ti ti-target toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Chỉ số recommend</div>
+                <div class="toc-sub">3 chỉ số mục tiêu (56% crit · 15,4% hiểu ý · 100% chính xác), tại sao crit Mạc Đao mạnh gấp đôi, ưu tiên chỉ số trang bị.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="tank-congphap">
+              <i class="ti ti-book-2 toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Công pháp · Căn cơ trường phái</div>
+                <div class="toc-sub">Bát Phong Lôi Thương + Than Sinh Đao Pháp — chi tiết skill chủ động, kỹ năng tích lực, bị động đáng chú ý.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item is-hidden" data-goto="tank-tampphap">
+              <i class="ti ti-flame toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Tâm pháp · Tuyệt học <span class="tag tag-worst" style="font-size:9px">đang cập nhật</span></div>
+                <div class="toc-sub">Adaptive Steel &amp; Exquisite Scenery — bộ tâm pháp tank Mạc Đao. Sắp ra mắt.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item is-hidden" data-goto="tank-trangbi">
+              <i class="ti ti-sword toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Trang bị · Hoàn thiện build <span class="tag tag-worst" style="font-size:9px">đang cập nhật</span></div>
+                <div class="toc-sub">Bộ Rainwhispers (+10% crit · +15% khi khiên kích hoạt) và các bộ khác — chi tiết slot trang bị, tune đồ. Sắp ra mắt.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -533,7 +703,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-tank-tampphap">
+    <section class="page is-hidden" id="page-tank-tampphap">
       <div class="container">
 
         <div class="hero">
@@ -557,7 +727,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-tank-trangbi">
+    <section class="page is-hidden" id="page-tank-trangbi">
       <div class="container">
 
         <div class="hero">
@@ -581,7 +751,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-heal-chiso">
+    <section class="page is-hidden" id="page-heal-chiso">
       <div class="container">
 
         <div class="hero">
@@ -605,7 +775,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-heal-congphap">
+    <section class="page is-hidden" id="page-heal-congphap">
       <div class="container">
 
         <div class="hero">
@@ -629,7 +799,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-heal-tampphap">
+    <section class="page is-hidden" id="page-heal-tampphap">
       <div class="container">
 
         <div class="hero">
@@ -653,7 +823,7 @@
       </div>
     </section>
 
-    <section class="page" id="page-heal-trangbi">
+    <section class="page is-hidden" id="page-heal-trangbi">
       <div class="container">
 
         <div class="hero">
@@ -1159,6 +1329,9 @@
           <div class="note" style="margin-top:14px">
             Vượt hard cap bằng <strong>Tỷ lệ Chí mạng trực tiếp</strong> / <strong>Tỷ lệ Hiểu ý trực tiếp</strong> — hai stat riêng biệt, không bị giới hạn bởi các cap trên.
           </div>
+          <div class="note" style="margin-top:10px">
+            <strong>Khi <span class="term-crit">Chí mạng</span> + <span class="term-aff">Hiểu ý</span> &gt; 100%:</strong> <span class="term-aff">Hiểu ý</span> giữ nguyên dải y%, <span class="term-crit">Chí mạng</span> bị bóp xuống cho vừa — <em>Chí mạng thực tế = Chính xác × (1 − Hiểu ý)</em>. Đòn Thường rơi xuống 0 trong vùng này. Build cap kép (80 + 40) → mỗi đòn Chính xác: 40% Hiểu ý, 60% Chí mạng (bị bóp từ 80% raw), 0% Thường.
+          </div>
         </div>
 
         <div class="card">
@@ -1330,6 +1503,443 @@
               <div class="attr-cmp-verdict verdict-skip">Bỏ qua</div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD WAR · HUB -->
+    <section class="page guild-war" id="page-guildwar">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Bang chiến · 30v30</div>
+            <h1>Guild War</h1>
+            <div class="sub">Cẩm nang chiến đấu 30v30 — đội hình, lối chơi, mẹo nhỏ và tune đồ.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-flag"></i>Mục đích guide</h2>
+          <p>Guild War là chế độ Bang chiến 30v30 — hai team Công và Thủ tranh nhau phá trụ, giữ ngỗng nhà và hạ boss. Guide này tổng hợp lối chơi, đội hình tối ưu, mẹo nhỏ trong trận và ưu tiên tune đồ để anh chị em <span class="lc-grad">Lunar Capital</span> đánh hiệu quả nhất.</p>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-book-2"></i>Trong section này có gì</h2>
+          <div class="toc">
+            <button class="toc-item" data-goto="guildwar-doihinh">
+              <i class="ti ti-users-group toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Phân tích đội hình</div>
+                <div class="toc-sub">Team Công · Team Thủ — yêu cầu class và mục tiêu chiến thuật.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="guildwar-loichoi">
+              <i class="ti ti-route toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Lối chơi cơ bản</div>
+                <div class="toc-sub">Giai đoạn 5 phút đầu · Giai đoạn giữa trận — sử dụng skill và mốc thời gian.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="guildwar-tricks">
+              <i class="ti ti-bulb toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Mẹo &amp; Thủ thuật</div>
+                <div class="toc-sub">Tricks &amp; Tips — Unstuck, buff chạy nhanh, các mẹo nhỏ trong trận.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="guildwar-tune">
+              <i class="ti ti-adjustments toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Tune &amp; Kỳ thuật</div>
+                <div class="toc-sub">Ưu tiên tune đồ cho Guild War · Kỳ thuật chiến đấu.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD WAR · PHÂN TÍCH ĐỘI HÌNH -->
+    <section class="page guild-war" id="page-guildwar-doihinh">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Guild War · Đội hình</div>
+            <h1>Phân tích đội hình</h1>
+            <div class="sub">Yêu cầu class và mục tiêu chiến thuật cho hai team trong trận 30v30.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-layout-grid"></i>Sơ đồ đội hình cân bằng (15 vs 15)</h2>
+          <p>6 nhóm phân bố trên 3 lane TOP / MID / BOT — mỗi nhóm gồm 1 Tank + 1–2 Healer + 2–3 DPS, cân bằng giữa hai phe Công và Thủ.</p>
+
+          <div class="gw-formation">
+
+            <div class="gw-formation-col">
+              <div class="gw-team-col-head"><i class="ti ti-swords"></i>Team Công — 15 người</div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">CÔNG 1</span>
+                  <span class="gw-lane">TOP</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">TANK</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 3</span><span class="gw-tag tag-qc">QC</span></li>
+                </ul>
+              </div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">CÔNG 2</span>
+                  <span class="gw-lane">MID</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">Tank</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">2 Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-vd">VD</span></li>
+                </ul>
+              </div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">CÔNG 3</span>
+                  <span class="gw-lane">BOT</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">Tank</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-qc">QC</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 3</span><span class="gw-tag tag-vd">VD</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="gw-formation-col">
+              <div class="gw-team-col-head"><i class="ti ti-shield"></i>Team Thủ — 15 người</div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">THỦ 1</span>
+                  <span class="gw-lane">TOP</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">TANK</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 3</span><span class="gw-tag tag-vd">VD</span></li>
+                </ul>
+              </div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">THỦ 2</span>
+                  <span class="gw-lane">MID</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">TANK</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">2 Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-sd">SD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-sd">SD</span></li>
+                </ul>
+              </div>
+
+              <div class="gw-group">
+                <div class="gw-group-head">
+                  <span class="gw-group-label">THỦ 3</span>
+                  <span class="gw-lane">BOT</span>
+                </div>
+                <ul class="gw-group-roster">
+                  <li class="gw-row is-tank"><i class="ti ti-shield-half"></i><span class="gw-role">Tank</span></li>
+                  <li class="gw-row is-healer"><i class="ti ti-heart-plus"></i><span class="gw-role">Healer</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 1</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 2</span><span class="gw-tag tag-vd">VD</span></li>
+                  <li class="gw-row is-dps"><i class="ti ti-sword"></i><span class="gw-role">DPS 3</span><span class="gw-tag tag-vd">VD</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="note">
+            <strong>Chú thích viết tắt:</strong>
+            SD = Song Đao · QC = Quạt Công (Quạt Dù Công) · VD = Vô Danh.
+          </div>
+        </div>
+
+        <div class="gw-team-grid">
+          <div class="card">
+            <h2><i class="ti ti-swords"></i>Team Công</h2>
+            <ul class="gw-list">
+              <li>Cần tối thiểu 2 Quạt Dù công</li>
+              <li>Mục tiêu: buff Z dù cho team công đẩy trụ nhanh</li>
+              <li>Ưu tiên buff cho 2 team công top và bot</li>
+              <li>Tàng hình 5s đủ buff rồi mới bắt đầu đánh</li>
+            </ul>
+            <figure>
+              <img src="images/guild-war/z-du-cong.png" alt="">
+              <figcaption>Z Dù Công</figcaption>
+            </figure>
+          </div>
+
+          <div class="card">
+            <h2><i class="ti ti-shield"></i>Team Thủ</h2>
+            <ul class="gw-list">
+              <li>Cần 1–2 Song Đao</li>
+              <li>Z Song Đao có thể cấm heal cho người cầm cây</li>
+            </ul>
+            <figure>
+              <img src="images/guild-war/z-song-dao.png" alt="">
+              <figcaption>Z Song Đao</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="subpage-backlinks">
+          <button class="inline-link" data-goto="guildwar">← Guild War</button>
+          <span class="sep" aria-hidden="true">·</span>
+          <button class="inline-link" data-goto="intro">Trang chủ</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD WAR · LỐI CHƠI CƠ BẢN -->
+    <section class="page guild-war" id="page-guildwar-loichoi">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Guild War · Tactic</div>
+            <h1>Lối chơi cơ bản</h1>
+            <div class="sub">Hai giai đoạn chính của trận đấu — 5 phút đầu và giữa trận sau khi phá trụ.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-clock-hour-3"></i>Giai đoạn 5 phút đầu</h2>
+
+          <h3>Team Thủ (15 người)</h3>
+          <ul class="gw-list">
+            <li>Clear rừng: 3 người / 1 bãi + 3 người cướp rừng</li>
+            <li>Clear xong rừng → ra def trụ nhà</li>
+            <li>Không có địch công trụ → tiến lên đẩy trụ cùng lane mình đang def</li>
+          </ul>
+          <figure>
+            <img src="images/guild-war/van-hanh-team-thu-15-nguoi.png" alt="">
+            <figcaption>Cách vận hành team thủ 15 người</figcaption>
+          </figure>
+
+          <h3>Team Công (15 người)</h3>
+          <ul class="gw-list">
+            <li>10 top, 5 mid đẩy trụ</li>
+            <li>Mỗi team ít nhất 1 Quạt Dù công buff dmg</li>
+          </ul>
+          <figure>
+            <img src="images/guild-war/van-hanh-team-cong-15-nguoi-v1.png" alt="">
+            <figcaption>Vận hành team công 15 người ver 1</figcaption>
+          </figure>
+
+          <h3>Sử dụng skill</h3>
+          <div class="row"><span class="row-src">Z Dù Công</span><span class="row-val">+20% dmg cho team</span></div>
+          <div class="row"><span class="row-src">Q Dù Heal</span><span class="row-val">+20% dmg cho team</span></div>
+          <div class="row"><span class="row-src">Z Cửu Kiếm</span><span class="row-val">tăng dmg nhận vào của trụ (Z trúng trụ mới tính nha)</span></div>
+          <div class="row"><span class="row-src">Buff tăng 100% dmg vào trụ</span><span class="row-val">&nbsp;</span></div>
+          <div class="note">Với chừng này buff, tốc độ phá trụ là siêu nhanh.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-clock-hour-9"></i>Giai đoạn giữa trận — Sau khi phá trụ</h2>
+
+          <h3>Team Thủ</h3>
+          <ul class="gw-list">
+            <li>Dồn về def ngỗng nhà</li>
+            <li>Song đao giữ Z lại đợi bưng cây thì xoáy để cấm heal thằng bưng cây</li>
+          </ul>
+
+          <h3>Team Công</h3>
+          <ul class="gw-list">
+            <li>Dồn dmg vào ngỗng (target vào ngỗng pls)</li>
+            <li>Boss ra phút 25:00</li>
+            <li>25:30 — 2–3 người về nhà cầm gà ra ném boss</li>
+            <li>Tất cả team công dồn về đánh boss</li>
+          </ul>
+
+          <h3>Sử dụng skill</h3>
+          <div class="row"><span class="row-src">Z Dù Công</span><span class="row-val">+20% dmg cho team</span></div>
+          <div class="row"><span class="row-src">Q Dù Heal</span><span class="row-val">+20% dmg cho team</span></div>
+          <div class="row"><span class="row-src">Z Cửu Kiếm</span><span class="row-val">tăng dmg nhận vào của trụ (Z trúng trụ mới tính nha)</span></div>
+          <div class="row"><span class="row-src">Buff 100% dmg ngỗng</span><span class="row-val">&nbsp;</span></div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-clock"></i>
+          <div class="warn-text">
+            <strong>Mốc thời gian quan trọng:</strong>
+            <ul class="gw-list">
+              <li>25:30 / 15:30 dồn về boss</li>
+              <li>2–3 người về lấy gà ra ném boss</li>
+              <li>Xài trick Unstuck/thoát kẹt để về</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure>
+          <img src="images/guild-war/moc-thoi-gian-quan-trong.png" alt="">
+          <figcaption>Mốc thời gian quan trọng</figcaption>
+        </figure>
+
+        <div class="subpage-backlinks">
+          <button class="inline-link" data-goto="guildwar">← Guild War</button>
+          <span class="sep" aria-hidden="true">·</span>
+          <button class="inline-link" data-goto="intro">Trang chủ</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD WAR · MẸO & THỦ THUẬT -->
+    <section class="page guild-war" id="page-guildwar-tricks">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Guild War · Tips</div>
+            <h1>Mẹo &amp; Thủ thuật</h1>
+            <div class="sub">Những mẹo nhỏ giúp anh chị em xoay sở nhanh trong trận.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-arrow-back"></i>Tip Unstuck / thoát kẹt để về thẳng nhà</h2>
+          <p>Vào Setting → chọn "Thoát khỏi trạng thái kẹt / Unstuck" → sẽ được tele về thẳng nhà.</p>
+          <figure>
+            <img src="images/guild-war/trick-unstuck.png" alt="">
+            <figcaption>Trick Unstuck / thoát kẹt</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-run"></i>Buff chạy nhanh và không bị cản bưng cây</h2>
+          <figure>
+            <img src="images/guild-war/buff-chay-nhanh.png" alt="">
+            <figcaption>Dành cho quản trị viên</figcaption>
+          </figure>
+        </div>
+
+        <div class="subpage-backlinks">
+          <button class="inline-link" data-goto="guildwar">← Guild War</button>
+          <span class="sep" aria-hidden="true">·</span>
+          <button class="inline-link" data-goto="intro">Trang chủ</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ GUILD WAR · TUNE & KỲ THUẬT -->
+    <section class="page guild-war" id="page-guildwar-tune">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Guild War · Tune</div>
+            <h1>Tune và Kỳ thuật</h1>
+            <div class="sub">Ưu tiên tune đồ cho chế độ Guild War và các kỳ thuật chiến đấu.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-sword"></i>Tune Vũ khí</h2>
+          <div class="tune-priority is-high">Ưu tiên cao</div>
+          <figure>
+            <img src="images/guild-war/tune-vk.png" alt="">
+            <figcaption>Hiệu quả tune Vũ khí — hồi tinh nguyên và hồi máu khi Xử Quyết</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-shirt"></i>Tune Áo giáp</h2>
+          <div class="tune-priority is-high">Ưu tiên cao</div>
+          <figure>
+            <img src="images/guild-war/tune-shirt.png" alt="">
+            <figcaption>Hiệu quả tune Áo giáp — giảm sát thương phải chịu</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-helmet"></i>Tune Mũ</h2>
+          <div class="tune-priority is-skip">Không cần thiết</div>
+          <figure>
+            <img src="images/guild-war/tune-helmet.png" alt="">
+            <figcaption>Hiệu quả tune Mũ — Cường Tráng sau khi giải khống chế</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-shoe"></i>Tune Chân</h2>
+          <div class="tune-priority is-skip">Không cần thiết</div>
+          <figure>
+            <img src="images/guild-war/tune-shoe.png" alt="">
+            <figcaption>Hiệu quả tune Chân — né tránh thành công hồi Chân Khí / Khí Huyết</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-hand-grab"></i>Tune Tay</h2>
+          <div class="tune-priority is-skip">Không cần thiết</div>
+          <figure>
+            <img src="images/guild-war/tune-hand-grab.png" alt="">
+            <figcaption>Hiệu quả tune Tay — gỡ thế thành công hồi tinh nguyện / Chân Khí</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-sparkles"></i>Kỳ thuật</h2>
+          <figure>
+            <img src="images/guild-war/ky-thuat.png" alt="">
+            <figcaption>Bộ kỳ thuật</figcaption>
+          </figure>
+        </div>
+
+        <div class="subpage-backlinks">
+          <button class="inline-link" data-goto="guildwar">← Guild War</button>
+          <span class="sep" aria-hidden="true">·</span>
+          <button class="inline-link" data-goto="intro">Trang chủ</button>
         </div>
 
       </div>

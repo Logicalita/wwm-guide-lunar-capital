@@ -1,11 +1,19 @@
 # Where Winds Meet — Combat Knowledge Base
 
-> Agent reference file. All content sourced from Game8, Keengamer, Metabattle, AllThings.how, GamerGuides, community calculators, Steam guides, and Chinese-language sources (游民星空, 16yanyun.com, 网易云游戏).
-> ⚠️ **Fextralife wiki is NOT a trusted source for this game** — it has been observed to publish outdated/incorrect mechanics (e.g. wrong Crit damage values). Always cross-validate against Chinese community sources.
 > Chinese title: **燕云十六声** (Yān Yún Shíliù Shēng). Working title during development: 百面千寻.
 > Developer: Everstone Studio. Publisher: NetEase Games.
 > Release: November 14, 2025 (PS5 + PC); December 12, 2025 (iOS/Android). Setting: Fifth Dynasties and Ten Kingdoms, 10th-century China.
-> Last updated: 2026-05-11
+> Last updated: 2026-05-25
+
+## Sources of Truth (priority order)
+
+1. **In-game / runtime observation** (canonical) — datestamped tests in this repo. Override every other source when they conflict.
+2. **[wherewindsmeetcalculator.com/wiki/](https://wherewindsmeetcalculator.com/wiki/)** — high-trust community calculator wiki. The default reference for damage formulas, attribute conversion rates, and hit-resolution mechanics. Use as the baseline when in-game data is absent.
+3. **Chinese community sources** (游民星空, 16yanyun.com, 网易云游戏, NGA threads) — research material; valuable for skill descriptions and patch context.
+4. **English aggregated wikis** (Game8, Keengamer, Metabattle, AllThings.how, GamerGuides) — research material only; cross-validate before citing.
+5. **Fextralife** — NOT TRUSTED for mechanics. Has published incorrect Crit damage values and sequential-rolling claims that didn't match in-game.
+
+When a source-2 claim conflicts with the guide AND no in-game test exists, flag the line for re-testing rather than silently overwriting. When a source-2 claim conflicts with an in-game test that IS in this repo, keep the in-game value and append a discrepancy note here.
 
 ---
 
@@ -75,6 +83,9 @@ Every attack
 - **Abrasion Conversion Rate** — exact mechanic uncertain; the Fextralife "rescue to Normal" claim is wrong (Non-Precision resolves to Affinity or Abrasion only). Likely affects Abrasion damage magnitude. Pending in-game verification.
 - Effective Precision = 65% base + (Your Added Precision) / (1 + Enemy Judgment Resistance)
 - **Stat caps:** Affinity Rate cap = **40%**; Critical Rate cap = **80%**; Precision Rate cap = 100%. Natural cap sum y+x = 120% → P(Normal | Precision) = 0 when both maxed.
+- **Affinity squeezes Crit when x + y > 100%** (per wherewindsmeetcalculator.com): once combined Crit Rate + Affinity Rate exceeds 100%, Affinity keeps its full y band and Crit gets compressed to fit. **Actual Crit (on Precision hit) = Precision × (1 − Affinity)**. Normal hits stay at 0 in this regime. So the natural-cap (80% + 40% = 120%) build behaves as: per Precision hit → y = 40% Affinity, x = 60% Crit (squeezed down from 80% raw), Normal = 0.
+
+> 📌 **Discrepancy with source-2 (wiki) — kept guide value**: wherewindsmeetcalculator.com states "Panel Crit = Normal Crit / 1.15", implying a 15% Panel/Display resistance factor. Our in-game testing (2026-05-11) measured a **45%** Judgment Resistance applied to effective gear substats (`vàng = trắng / 1.45`). Treating these as separate mechanics (Panel↔Raw vs Effective↔Raw conversion); using the in-game-tested 45% across the guide per source-priority rule #1.
 
 > Note: Some English sources show Crit and Affinity as a sequential probability tree (P(Crit) = (1−y)×x). This is mathematically equivalent to additive ONLY if you treat "y" differently — DO NOT USE THE SEQUENTIAL MODEL when computing build optimization. Use additive: P(Crit | Precision) = x.
 
@@ -111,12 +122,24 @@ Final Damage = Base Damage
 ```
 
 ### Key Zone Details
-- **Damage Bonus Zone:** Multiplicative between categories (General / Skill / Weapon), additive within same category. Damage bonuses and debuffs share this zone.
-- **Penetration Zone:** Physical Penetration also affects fixed damage.
-- **Enemy Defense Reduction:** `Enemy Defense / (Enemy Defense + 1000)` — soft cap curve.
+- **Damage Bonus Zone:** Multiplicative between categories (General / Skill / Weapon), additive within same category. Damage bonuses and debuffs share this zone (additive); damage **reduction** is multiplicative.
+- **Penetration Zone (positive, Pen ≥ Res):** `(Pen − Res) / 100`. Physical Penetration also affects fixed damage.
+- **Penetration Zone (negative, Pen < Res):** `(Pen − Res) / 200` per wherewindsmeetcalculator.com — penalty is halved when the target's resistance exceeds your penetration. (Replaces the older "Enemy Defense / (Enemy Defense + 1000)" formula from aggregated wikis, which has been removed per source-priority rule #2.)
 - **Multiple DR sources** stack multiplicatively: `(1−DR₁) × (1−DR₂)` etc.
-- **Crit Damage** = +50% damage (applies to both damage and healing values).
-- **Affinity Damage** = +35% on top of Max Physical ATK (always deterministic — not a range roll).
+- **Crit Damage** = +50% base damage (applies to both damage and healing values). Full formula per wiki: `Crit DMG = Base DMG × (1 + Base Crit DMG + Crit DMG Bonus)`.
+- **Affinity Damage** = +35% on top of Max Physical ATK (always deterministic — not a range roll). Full formula per wiki: `Affinity DMG = Max ATK × (1 + Base Aff DMG + Aff Bonus)`.
+- **Damage Deepening:** Talent passives phrased as "Physical/Element damage deepened by X%" act as an **independent** damage bonus tied to that attribute — they multiply alongside the Damage Bonus Zone, not inside it.
+
+### Healing Math (special case)
+
+Per wherewindsmeetcalculator.com, healing skills follow a stripped-down version of the damage formula:
+
+- **Precision, Graze, and Affinity are ineffective on heals.** Healing is rolled as 100% Precision-equivalent — only **Crit / non-Crit** branches matter. Crit on a heal still applies +50% (same Crit bonus as on damage).
+- **Secondary-element ATK is inert.** Only **Physical ATK** and **Qiansi (Hidden / 千思)** contribute to the heal magnitude. Equipping secondary-element gear gives 0 healing benefit.
+- **Independent fluctuation:** every heal has ±10% random variance applied independently of any other modifier.
+- **Low-level dungeons** (pre-endgame) carry an implicit **+100% healing bonus** in the General Damage Bonus zone — heals scale up in those contexts beyond what gear stats alone predict.
+
+This is the reference for any future Healer (Silkbind-Deluge) chỉ số subpage — DPS-focused chỉ số subpages don't surface these mechanics.
 
 ---
 
@@ -142,6 +165,10 @@ These are the five main leveled attributes that scale combat stats:
 | Momentum (Thế) | +0.9 Max Physical ATK + 0.038% Affinity Rate |
 
 > ✅ **All 5 rates verified in-game on 2026-05-11.** Aggregated sources (Keengamer, 16yanyun.com) had Body undocumented and Power wrong by 50% (+0.9 instead of +1.35); Defense / Agility / Momentum matched. Power is NOT equal to Momentum in raw ATK — Power gives **+0.45 more Max ATK** per point but no Affinity Rate.
+
+> 📌 **Discrepancies with source-2 (wiki):**
+> - **Body**: wherewindsmeetcalculator.com states `Constitution (体): 1 = 60 HP`. Our in-game test on 2026-05-11 measured **+72 HP/point**. Keeping the in-game value per source-priority rule #1. May be a patch-version drift or wiki staleness — re-verify if a future game patch shifts attribute scaling.
+> - **Power (Kình lực)**: wherewindsmeetcalculator.com states `Strength (劲): 1 = 0.225 Min ATK + 1.36 Max ATK`. Our table only records the Max ATK term (+1.35, consistent with wiki's 1.36 ≈ rounding). The wiki's **+0.225 Min ATK/point** component was NOT measured on 2026-05-11. **Pending re-test**: add ~20 Kình lực via respec, record Min ATK before/after. If Δ Min ATK ≈ +4.5, update this line to `+0.225 Min ATK + 1.35 Max ATK`. If unchanged, leave as-is and note the wiki discrepancy stands.
 
 ### Attribute vs Gear Stat Efficiency (in-game tested, level 91, max-roll gear, 2026-05-11)
 
