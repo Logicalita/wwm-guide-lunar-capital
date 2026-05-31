@@ -617,6 +617,19 @@ Full support: burst and sustained healing, single-target and group recovery, rev
 | chiêu thức | Skills / Techniques | 招式 | General skill term |
 | trạng thái kiệt sức | Exhausted state | 气竭 (qìjié) | When Qi broken; stunned; Execute window |
 | hệ thống hài hòa | Melodies of Peace | 和乐 | Oddities-based node progression system |
+| Định âm | Attunement | 定音 (dìngyīn) | Gear/Arena "tune" system; user gloss in chat: "tune trang bị" |
+| Võ đài | Arena | 止戈 (zhǐgē) | User-preferred term for the PvP Arena system; replaces earlier "Đấu trường" across the site. Compound: `Định âm võ đài` (lowercase suffix). |
+| Sức bền | Endurance / Stamina | 耐力 (nàilì) | Combat resource; user-preferred over earlier "Bền lực"; gloss: Thể lực |
+| xử quyết | Execute / Execution | 处决 (chǔjué) | Finisher on an Exhausted target; user-preferred over earlier "xử tử" |
+| thiên phú | Talent | 天赋 (tiānfù) | Path talent (passive bonus) system |
+| Minh Kim – Hồng / Ảnh | Bellstrike – Splendor / Umbra | 鸣金 (míngjīn) | Path family Minh Kim; Hồng = Splendor, Ảnh = Umbra |
+| Khiên Ti – Ngọc / Lâm | Silkbind – Jade / Deluge | 牵丝 (qiānsī) | Path family Khiên Ti; Ngọc = Jade, Lâm = Deluge |
+| Liệt Thạch – Uy / Quân | Stonesplit – Might / Strength | 裂石 (lièshí) | Path family Liệt Thạch; Uy = Might, Quân = Strength |
+| Phá Trúc – Phong / Trần | Bamboocut – Wind / Dust | 破竹 (pòzhú) | Path family Phá Trúc; Phong = Wind, Trần = Dust |
+| Vô Danh Thương Pháp | Nameless Spear | 无名枪法 | Bellstrike–Splendor spear skill set |
+| Vô Danh Kiếm Pháp | Nameless Sword | 无名剑法 | Bellstrike–Splendor sword skill set |
+| Càn khôn Định | Qiankun's Lock | 乾坤定 (qiánkūn dìng) | Vô Danh Thương Pháp skill; Immobilize on non-Boss, Qi Imbalance on Boss |
+| Sát thương Chân khí | Qi Damage | — | Damage to the Qi / stagger bar; user-preferred over earlier "Khí thương" |
 
 ---
 
@@ -1058,3 +1071,249 @@ Scarlet Spin (umbrella out) → hit 2+ enemies → Candlelight stacks
 | **Beyond the Chill** | +780 Max HP | After 10s without dmg: next hit + all dmg within 2s after = −40% | Bamboocut–Dust, defensive ranged |
 | **Jadeware** | +Max Physical ATK | Martial Art Skill cast → +10% Affinity DMG; +20% vs controlled/<40% Qi targets | Bellstrike–Splendor accessories |
 | **Hawkwing** | (see above) | (see above) | DPS universal |
+
+---
+
+## 25. Vietnamese Name Glossary — EN ↔ CN ↔ VN
+
+Authoritative names sourced from the official Traditional-Chinese patch note (`wherewindsmeetgame.com/hmt/news/update/Adjustment528.html`, v1.7 — 28/05/2026). Vietnamese readings use **Hán Việt** for proper-noun feel, matching the in-file convention for Vô Danh Thương/Kiếm Pháp.
+
+> Reading convention: `時` → **thời** (not *thì*) — applied throughout.
+
+### 25.1 Schools / Sub-paths (流派)
+
+| EN | CN | VN |
+|---|---|---|
+| Bellstrike-Splendor | 鳴金·虹 | Minh Kim — Hồng |
+| Bellstrike-Umbra | 鳴金·影 | Minh Kim — Ảnh |
+| Silkbind-Jade | 牽絲·玉 | Khiên Ti — Ngọc |
+| Silkbind-Deluge | 牽絲·霖 | Khiên Ti — Lâm |
+| Stonesplit-Might | 裂石·威 | Liệt Thạch — Uy |
+| Stonesplit-Strength | 裂石·鈞 | Liệt Thạch — Quân |
+| Bamboocut-Wind | 破竹·風 | Phá Trúc — Phong |
+| Bamboocut-Dust | 破竹·塵 | Phá Trúc — Trần |
+
+### 25.2 Martial Arts (武學 / Công pháp)
+
+| School | EN | CN | VN |
+|---|---|---|---|
+| MK-Hồng | (Nameless Spear) | 無名槍法 | Vô Danh Thương Pháp |
+| MK-Hồng | (Nameless Sword) | 無名劍法 | Vô Danh Kiếm Pháp |
+| MK-Ảnh | Heavenquaker Spear | 九曲驚神槍 | Cửu Khúc Kinh Thần Thương |
+| MK-Ảnh | Strategic Sword | 积矩九剑 | Tích Củ Cửu Kiếm |
+| KT-Ngọc | Vernal Umbrella | 九重春色 | Cửu Trùng Xuân Sắc |
+| KT-Ngọc | Inkwell Fan | 青山執筆 | Thanh Sơn Chấp Bút |
+| KT-Lâm | Soulshade Umbrella | 千香引魂蠱 | Thiên Hương Dẫn Hồn Cổ |
+| LT-Uy | Thundercry Blade | 嗟夫刀法 | Ta Phu Đao Pháp |
+| LT-Uy | Stormbreaker Spear | 八方風雷槍 | Bát Phương Phong Lôi Thương |
+| LT-Quân | Snowparting Blade | 斬雪刀法 | Trảm Tuyết Đao Pháp |
+| LT-Quân | Phalanxbane Blade | 十方破陣 | Thập Phương Phá Trận |
+| PT-Phong | Infernal Twinblades | 泥犁三垢 | Nê Lê Tam Cấu |
+| PT-Phong | Mortal Rope Dart | 粟子遊塵 | Túc Tử Du Trần |
+| PT-Trần | Everspring Umbrella | 醉夢遊春 | Túy Mộng Du Xuân |
+| PT-Trần | Unfettered Rope Dart | 粟子行雲 | Túc Tử Hành Vân |
+
+### 25.3 Inner Ways (心法 / Tâm pháp)
+
+| School | EN | CN | VN |
+|---|---|---|---|
+| MK-Hồng | Sword Morph | 無名心法 | Vô Danh Tâm Pháp |
+| MK-Hồng | Mountain's Might | 千山法 | Thiên Sơn Pháp |
+| MK-Hồng | Battle Anthem | 威猛歌 | Uy Mãnh Ca |
+| MK-Ảnh | Wolfchaser's Art | 逐狼心經 | Trục Lang Tâm Kinh |
+| MK-Ảnh | Insightful Strike | 凝神章 | Ngưng Thần Chương |
+| MK-Ảnh | Sword Horizon | 劍氣縱橫 | Kiếm Khí Tung Hoành |
+| KT-Ngọc | Thunderous Bloom | 春雷篇 | Xuân Lôi Thiên |
+| KT-Ngọc | Star Reacher | 縱地摘星 | Tung Địa Trích Tinh |
+| KT-Lâm | Restoring Blossom | 杏花不見 | Hạnh Hoa Bất Kiến |
+| KT-Lâm | Esoteric Revival | 指玄篇註 | Chỉ Huyền Thiên Chú |
+| MK-Ảnh | Fivefold Bleed | 極樂泣血 | Cực Lạc Khấp Huyết |
+| LT-Uy | Exquisite Scenery | 山河絕韻 | Sơn Hà Tuyệt Vận |
+| LT-Uy | Art of Resistance | 抗揍大法 | Kháng Trùy Đại Pháp |
+| LT-Uy | Trapped Beast | 困獸心經 | Khốn Thú Tâm Kinh |
+| LT-Quân | Frost-Clad Night | 霜天白夜 | Sương Thiên Bạch Dạ |
+| LT-Quân | Throat-Piercing Art | 穿喉訣 | Xuyên Hầu Quyết |
+| LT-Quân | Steadfast Devotion | 孤忠不辭 | Cô Trung Bất Từ |
+| PT-Phong | Echoes of Oblivion | 忘川絕響 | Vong Xuyên Tuyệt Hưởng |
+| PT-Phong | Vendetta | 心彌泥魚 | Tâm Di Nê Ngư |
+| PT-Phong | Riptide Reflex | 滄浪劍訣 | Thương Lãng Kiếm Quyết |
+| PT-Trần | Phantom Rally | 千營一呼 | Thiên Doanh Nhất Hô |
+| PT-Trần | Towline Sweep | 繩舟行木 | Thằng Châu Hành Mộc |
+| PT-Trần | Light Anew | 燈兒亮 | Đăng Nhi Lượng |
+
+### 25.4 Sets (套裝)
+
+| School | EN | CN | VN |
+|---|---|---|---|
+| MK-Hồng | Jadeware | 玉斗 | Ngọc Đẩu |
+| KT-Ngọc | Veil of the Willow | 煙柳重重 | Yên Liễu Trùng Trùng |
+| LT-Uy | Rainwhisper | 時雨 | Thời Vũ |
+| LT-Quân | Cleftpeak | 斷嶽 | Đoạn Nhạc |
+| PT-Trần | Starweave | 連星 | Liên Tinh |
+
+### 25.5 Translation conventions
+
+- **Hán Việt** for proper nouns (martial arts, inner ways, sets, named skills, named buffs/states, mystic skills) — preserves the wuxia register.
+- **Normal Vietnamese (sentence-case)** for stat-line bonuses, generic mechanics, weapon families, and descriptors (e.g., `Tỷ lệ hiểu ý`, `Tăng tấn công vật lý`, `Đòn nhẹ thường`).
+- **Sentence-case for talent names**: `Tăng cường <descriptor>` where descriptor is lowercase except embedded proper-noun martial-art names (e.g., `Tăng cường hiểu ý kiếm khí`, but `Tăng ST Hồi Toàn Tán`).
+- **`Tỷ`** (not `Tỉ`).
+- **First occurrence per `<h3>` section** in patch-note pages: render as `<em>VN Name</em> (EN Name)`.
+- **Subsequent occurrences**: `<em>VN Name</em>` only.
+- **Section-context aware** for ambiguous EN terms (e.g., `Concentration` → Khán Phá in MK-Ảnh / Ngưng Tâm in KT-Lâm).
+- **No CN inline** (no tooltips, no parenthetical CN) — keeps markup clean; lookup lives here in KNOWLEDGE.md §25.
+- **Keep EN** for: sub-school names in body text (already shown in `<h3>` headings), unverified entries with no clear CN match (Soulbound, Soul Return, Shocked, Phantom Umbrella, Soul Sweep, Midnight Judgment, Shattered Ridge, Blade Momentum, Fading Crimson, Bleeding).
+
+### 25.6 Buffs / States / Conditions
+
+| EN | CN | VN | Note |
+|---|---|---|---|
+| Endless Gale | 長風 | Trường Phong | |
+| Qi Imbalance | 真氣失衡 | Chân Khí Thất Hành | |
+| Moving Mountain | 山移 | Sơn Di | |
+| Concentration (MK-Ảnh) | 看破 | Khán Phá | Insightful Strike buff |
+| Concentration (KT-Lâm) | 凝心 | Ngưng Tâm | Restoring Blossom buff |
+| Lingering Bone | 滯骨 | Trệ Cốt | |
+| Blossoms | 繁花 | Phồn Hoa | Vernal Umbrella resource |
+| Spring Thunder | 春雷 | Xuân Lôi | |
+| Nurturing | 養心 | Dưỡng Tâm | |
+| Inner Passion | 熱血難涼 | Nhiệt Huyết Nan Lương | |
+| Adept | 神通 | Thần Thông | |
+| Iron Guards | 鐵衣戍魂 | Thiết Y Thú Hồn | |
+| Throat-Pierced | 穿喉 | Xuyên Hầu | |
+| Dread | 膽寒 | Đảm Hàn | Snowparting damage type |
+| Fearful Blade | 懼刃 | Cụ Nhận | Snowparting debuff |
+| Samsara | 輪迴 | Luân Hồi | |
+| Flamelash | 嗔焰 | Sân Diễm | Infernal Twinblades "anger flame" |
+| Forgetfulness | 走火入魔 | Tẩu Hỏa Nhập Ma | |
+| Resonance | 共鳴 | Cộng Minh | |
+| Soul Loss | 失魂 | Thất Hồn | |
+| Soulbreak | 失魂落魄 | Thất Hồn Lạc Phách | |
+| Exhausted | 氣竭 | Khí Kiệt | |
+| Airborne | 浮空 | Phù Không | |
+| Immobilized | 定身 | Định Thân | |
+| Sword's Zenith | 縱橫劍意 | Tung Hoành Kiếm Ý | Sword Horizon stack |
+| Empowered River Flow | 強效江流 | Cường Hiệu Giang Lưu | |
+| Empowered Effect of DoT | 持續類傷害的強效效果 | Hiệu ứng cường hóa của sát thương theo thời gian | descriptive |
+| High Bleeding | 高額流血 | Xuất huyết - Cao | |
+| Piercing Damage | 刺傷 | Sát thương xuyên phá | |
+| Battle Will | 戰意 | Chiến Ý | Tank resource |
+| Guarding Qi Core | 守關元 | Thủ Quan Nguyên | Talent + resource |
+
+### 25.7 Named Skills (non-Inner-Way)
+
+| EN | CN | VN | School |
+|---|---|---|---|
+| Shadow Step | 退亦有方 | Thoái Diệc Hữu Phương | MK-Hồng |
+| Vagrant Sword | 無以為家 | Vô Dĩ Vi Gia | MK-Hồng |
+| Multiple Sword Energies | 多道劍氣 | Đa Đạo Kiếm Khí | MK-Hồng |
+| Sword Energy | 劍氣 | Kiếm Khí | MK-Hồng |
+| Sword Energy DMG Boost | 劍氣增傷 | Kiếm Khí Tăng Thương | MK-Hồng |
+| Zenith Sword | 縱橫劍 | Tung Hoành Kiếm | MK-Ảnh |
+| Sword-Dash | 劍·突進 | Kiếm · Đột Tiến | MK-Ảnh |
+| Relentless Chase | 執訊連連 | Chấp Tấn Liên Liên | MK-Ảnh (Vô Danh Kiếm) |
+| Inner Balance Strike Ⅲ | 次三衡徑數 | Thứ Tam Hành Kính Số | Strategic Sword |
+| Second Track Slash | 次二衡徑數 | Thứ Nhị Hành Kính Số | Strategic Sword |
+| Sweep All | 掃千軍 | Tảo Thiên Quân | Heavenquaker Spear |
+| Sober Sorrow | 愁無酒 | Sầu Vô Tửu | Heavenquaker Spear |
+| Spring Away | 春飛盡 | Xuân Phi Tận | Vernal Umbrella |
+| Unfading Flower | 不謝花 | Bất Tạ Hoa | Vernal Umbrella |
+| Unfading Flower: Heavy Attack | 不謝花·重擊 | Bất Tạ Hoa · Trọng Kích | |
+| Spring Sorrow | 拋春恨 | Phao Xuân Hận | Vernal Umbrella |
+| Forsaken Fame | 浮名無寄 | Phù Danh Vô Ký | Inkwell Fan |
+| Floating Grace | 一念浮生 | Nhất Niệm Phù Sinh | Soulshade Umbrella |
+| Panacea Fan | 明川藥典 | Minh Xuyên Dược Điển | KT-Lâm (weapon set/name) |
+| Predator's Shield | 氣血護盾 | Khí Huyết Hộ Thuẫn | Thundercry Blade |
+| Storm Roar | 風雷嘯 | Phong Lôi Khiếu | Stormbreaker Spear |
+| Stonebreaker | 破石穿岩 | Phá Thạch Xuyên Nham | Thundercry Blade |
+| Stonebreaker Cleave | 破石穿岩劈 | Phá Thạch Xuyên Nham Phách | |
+| Stonebreaker Quake | 破石穿岩震 | Phá Thạch Xuyên Nham Chấn | |
+| Sunrush Gale | 逐日追風 | Trục Nhật Truy Phong | Thundercry Blade |
+| Thunder Shock | 驚雷震 | Kinh Lôi Chấn | Stormbreaker Spear |
+| Grave Frost | 塚上霜 | Trủng Thượng Sương | Snowparting Blade |
+| Snowbreak Spring | 撥雪尋春 | Bát Tuyết Tầm Xuân | Snowparting Blade |
+| General's Bane: Stab | 白刃殺將·刺 | Bạch Nhận Sát Tướng · Thích | Snowparting Blade |
+| Fleeting Trace | 飛鴻踏雪 | Phi Hồng Đạp Tuyết | Snowparting Blade |
+| Burning Heart | 焚此心 | Phần Thử Tâm | Phalanxbane Blade |
+| Soul Burning | 燃此魂 | Nhiên Thử Hồn | Phalanxbane Blade |
+| Total Annihilation | 蕩八荒 | Đãng Bát Hoang | Phalanxbane Blade |
+| Legion Summoner | 喚千軍 | Hoán Thiên Quân | Phalanxbane Blade |
+| Mo Blade Anxi Soldier | 陌刀武藝 | Mạch Đao Vũ Nghệ | Phalanxbane Blade |
+| Addled Mind | 癡障 | Si Chướng | Infernal Twinblades |
+| Blade of Heaven's Wrath | 天怒刀法 | Thiên Nộ Đao Pháp | Infernal Twinblades |
+| Rodent Rampage | 鼠鼠生威 | Thử Thử Sinh Uy | Mortal Rope Dart |
+| Rodent's Resilience | 伏鼠之縛 | Phục Thử Chi Phược | Mortal Rope Dart |
+| Cyclone Waltz / Scarlet Spin | 紅綃香斷 → 紅消香斷 | Hồng Tiêu Hương Đoạn | Everspring Umbrella — patch renamed 綃→消 |
+| Fragrant Song | 芳歌 | Phương Ca | Everspring Umbrella |
+| Returning Umbrella | 迴旋傘 | Hồi Toàn Tán | Everspring Umbrella |
+| Piercing Dart | 鏢鳴徹野 | Tiêu Minh Triệt Dã | Unfettered Rope Dart |
+| Burn and Bury | 焚巢搗穴 | Phần Sào Đảo Huyệt | Unfettered Rope Dart |
+
+### 25.8 Mystic Skills (秘技) & Perception Skills (感知技)
+
+| EN | CN | VN |
+|---|---|---|
+| Yaksha Rush | 藥叉破魔 | Dược Xoa Phá Ma |
+| Golden Body | 無相金身 | Vô Tướng Kim Thân |
+| Cloud Steps | 凌雲踏 | Lăng Vân Đạp |
+| Serene Breeze | 清風霽月 | Thanh Phong Tễ Nguyệt |
+| Guardian Palm—Breach | 韋陀正法·破障 | Vi Đà Chính Pháp · Phá Chướng |
+| Free Morph | 自在無礙 | Tự Tại Vô Ngại |
+| Drunken Poet | 太白醉月 | Thái Bạch Túy Nguyệt |
+| Talon Strike | 鷹爪連鑿 | Ưng Trảo Liên Tạc |
+| Meridian Touch | 點穴 | Điểm Huyệt |
+| Peak's Springless Silence *(Định âm)* | 春盡山空 | Xuân Tận Sơn Không |
+| Eclipse Shift *(Perception)* | 日月反 | Nhật Nguyệt Phản |
+
+### 25.9 Stat-line bonuses / Mechanics (normal Vietnamese, sentence-case)
+
+| EN | VN |
+|---|---|
+| Affinity Rate | Tỷ lệ hiểu ý |
+| Direct Affinity Rate | Tỷ lệ hiểu ý trực tiếp |
+| Min Physical Attack Bonus | Tăng tấn công vật lý tối thiểu |
+| Physical Attack Bonus | Tăng tấn công vật lý |
+| Physical Penetration Bonus | Tăng xuyên phá vật lý |
+| Min Bamboocut Attack Bonus | Tăng tấn công Phá Trúc tối thiểu |
+| Bamboocut Penetration Bonus | Tăng xuyên phá Phá Trúc |
+| Bellstrike Attack Bonus | Tăng tấn công Minh Kim |
+| Bellstrike Penetration Bonus | Tăng xuyên phá Minh Kim |
+| Final Effective Critical Rate | Tỷ lệ chí mạng cuối cùng |
+| Max HP | Máu tối đa |
+| Max Physical Attack | Tấn công vật lý tối đa |
+| All Martial Arts Enhancement | Tăng cường toàn bộ công pháp |
+| Art of Umbrella Boost | Tăng cường công pháp Ô |
+| Ballistic Enhancement | Tăng cường đầu đạn |
+| Everspring Umbrella: Martial Art Skill DMG Boost | Túy Mộng Du Xuân: Tăng ST kỹ năng công pháp |
+| Basic Light Attack | Đòn nhẹ thường |
+
+### 25.10 Weapon Families
+
+| EN | CN | VN |
+|---|---|---|
+| Sword | 劍 | Kiếm |
+| Spear | 槍 | Thương |
+| Heng Blade | 橫刀 | Hoành Đao |
+
+### 25.11 Combat Mechanics (canonical, user-confirmed 2026-05-31)
+
+User-confirmed Vietnamese translations for English combat/PvP mechanics terms. Casing matches user-specified form. First applied in `capnhat-v17.html` §II B (Phòng thủ, né & trúng đòn).
+
+| EN | VN | Casing | Note |
+|---|---|---|---|
+| map | bản đồ | lowercase, **no parenthetical** | bare translation, EN dropped |
+| combo | combo | — | **keep EN**; universal gaming term |
+| Defense Counter | Phòng thủ phản công | capital P | |
+| Hit *(state)* | Hit | — | **keep EN** |
+| Dodge | Né | capital N | |
+| Deflect | Deflect | — | **keep EN**; timing-parry skill name |
+| clip *(collision)* | đi xuyên | lowercase | drop "clip" framing in VN |
+| Perfect Dodge | Né hoàn hảo | capital N | |
+| Invincibility | bất hoại | lowercase | |
+| post-cast animation | Animation sau khi dùng chiêu | capital A | "Animation" kept as adopted loanword |
+| logic detection | Cơ chế phát hiện | capital C | |
+| projectile | đạn | lowercase | |
+| Tenacity | Kiên cường | capital K | matches existing file pattern; file elsewhere also uses parenthetical form `Tenacity (kiên cường)` |
+| **Guild War** | Guild War | — | **keep EN** |
+| **Ultimate** | Ultimate | — | **keep EN** |
+
+Applied across pages with `<em>VN</em> (EN)` first-occurrence parenthetical when VN replaces EN; subsequent occurrences VN-only. For "keep EN" entries, do not translate.

@@ -1,2 +1,7 @@
 .DS_Store
 **/.DS_Store
+
+# Local Claude Code config + regenerable cache
+.claude/settings.json
+.claude/settings.local.json
+.claude/graphify-out/

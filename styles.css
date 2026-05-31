@@ -1924,3 +1924,170 @@ h2 i {
    Remove the .is-hidden class from the element to bring it back online when
    real content lands. Designed for the "đang cập nhật" placeholders. */
 .is-hidden { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   PATCH NOTES — standalone document (capnhat-v*.html)
+   Used only by separate, shareable patch-note pages that load
+   styles.css but do NOT use the .layout / .sidebar shell.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Anchor-style nav item that links out to a separate HTML file
+   (e.g., the standalone patch-note page). Reuses .nav-item styling
+   but strips the default <a> underline and adds an external-link
+   chevron on the right edge. */
+a.nav-item, a.nav-item:hover { text-decoration: none; }
+.nav-item-link .nav-link-icon {
+  margin-left: auto;
+  font-size: 14px !important;
+  color: var(--gold-deep) !important;
+  margin-top: 2px !important;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.nav-item-link:hover .nav-link-icon { color: var(--gold) !important; opacity: 1; }
+
+body.patch-doc { padding: 0; }
+body.patch-doc .container.patch-main {
+  padding: 24px 16px 64px;
+}
+
+.patch-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 22px;
+  background: linear-gradient(180deg, rgba(31, 24, 18, 0.96) 0%, rgba(31, 24, 18, 0.88) 100%);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--gold-deep);
+}
+.patch-topbar.patch-topbar-bottom {
+  position: static;
+  margin: 32px -16px 0;
+  border-bottom: none;
+  border-top: 1px solid var(--gold-deep);
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(31, 24, 18, 0.92) 0%, transparent 100%);
+}
+.patch-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-ivory);
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Noto Serif Display', serif;
+  transition: color 0.2s ease;
+}
+.patch-back:hover { color: var(--silk); }
+.patch-back i { color: var(--gold); font-size: 16px; }
+.patch-back-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+.patch-version-tag {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Section anchor offset so sticky topbar doesn't cover the heading on jump. */
+.patch-section { scroll-margin-top: 70px; }
+
+/* h3 used as a path / sub-section divider inside a patch card. */
+.patch-path-h {
+  font-family: 'Noto Serif Display', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--gold-bright);
+  margin: 24px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--gold-faint);
+  letter-spacing: 0.01em;
+}
+.patch-path-h:first-child { margin-top: 4px; }
+.patch-path-h em {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Dense change list with a small gold tick instead of a bullet. */
+.patch-change-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+}
+.patch-change-list li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-ivory);
+  border-bottom: 1px dashed var(--ink-border-soft);
+}
+.patch-change-list li:last-child { border-bottom: none; }
+.patch-change-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 14px;
+  width: 8px;
+  height: 1px;
+  background: var(--gold);
+}
+.patch-change-list li em {
+  color: var(--gold-bright);
+  font-style: italic;
+  font-weight: 500;
+}
+.patch-change-list li strong {
+  color: var(--silk);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .patch-topbar { padding: 10px 14px; }
+  .patch-version-tag { display: none; }
+  .patch-path-h { font-size: 15.5px; }
+  .patch-path-h em { display: block; font-size: 12.5px; margin-top: 2px; }
+  .patch-change-list li { font-size: 13px; }
+}
+
+/* Per-Path-family accent colors — applied to Section I sub-path headings
+   and the <em> highlights inside their following change list. Maps:
+     Minh Kim   → blue
+     Khiên Ti   → green
+     Liệt Thạch → red
+     Phá Trúc   → purple
+   Section II and Section III keep the default gold highlight. */
+.patch-doc {
+  --path-mk: #6da9e0;  --path-mk-bright: #8ec4f0;  --path-mk-deep: #2a4e6e;
+  --path-kt: #7fc299;  --path-kt-bright: #a8d8b9;  --path-kt-deep: #2c5a3e;
+  --path-lt: #d6695a;  --path-lt-bright: #e88a7b;  --path-lt-deep: #6e2a26;
+  --path-pt: #a78bc8;  --path-pt-bright: #c4abe0;  --path-pt-deep: #4a3a64;
+}
+.patch-path-h.path-mk { color: var(--path-mk-bright); border-bottom-color: var(--path-mk-deep); }
+.patch-path-h.path-mk em { color: var(--path-mk); }
+.patch-path-h.path-mk + .patch-change-list li em { color: var(--path-mk-bright); }
+
+.patch-path-h.path-kt { color: var(--path-kt-bright); border-bottom-color: var(--path-kt-deep); }
+.patch-path-h.path-kt em { color: var(--path-kt); }
+.patch-path-h.path-kt + .patch-change-list li em { color: var(--path-kt-bright); }
+
+.patch-path-h.path-lt { color: var(--path-lt-bright); border-bottom-color: var(--path-lt-deep); }
+.patch-path-h.path-lt em { color: var(--path-lt); }
+.patch-path-h.path-lt + .patch-change-list li em { color: var(--path-lt-bright); }
+
+.patch-path-h.path-pt { color: var(--path-pt-bright); border-bottom-color: var(--path-pt-deep); }
+.patch-path-h.path-pt em { color: var(--path-pt); }
+.patch-path-h.path-pt + .patch-change-list li em { color: var(--path-pt-bright); }

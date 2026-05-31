@@ -10,6 +10,7 @@ Static Vietnamese-language build guide for the game **Where Winds Meet** (Mạc 
 ## Conventions
 - All user-facing copy is **Vietnamese**. Keep new strings in Vietnamese; do not auto-translate to English.
 - Game-term glossary: *chí mạng* = crit, *hiểu ý* = affinity, *chính xác* = precision (the "prec" damage branch — opposite is *không chính xác*), *thường* = normal hit, *sát thương yếu* (colloquially also *đòn xám*) = abrasion (non-prec damage outcome), *trắng* = raw stat on gear, *vàng* = effective stat after resist, *min/max thuộc tính khác hệ* = off-element min/max attribute roll.
+- **Logging manual translations**: when the user provides or confirms a Vietnamese translation of a game/UI term during chat (e.g. *Attunement → Định âm*, *"change Bền lực to Sức bền"*, *xử tử → xử quyết*), immediately record it in **`KNOWLEDGE.md` → §19 "Vietnamese ↔ English / Chinese Terminology"** as a new table row: Vietnamese term · English source · Chinese (if known, else `—`) · Notes (capture any user gloss/context, e.g. "tune trang bị"). If the term already has a row, update it instead of duplicating. This keeps §19 the canonical EN↔VN source so future sessions reuse the user's chosen spelling rather than re-guessing.
 - Color palette is theme-defined in `:root` of `styles.css` (gold / jade / cinnabar on inked background). Reuse the CSS variables — don't hardcode hex.
 - **Stat identity colors** (use these for anything visually representing a specific stat):
   - *chí mạng* / Critical → **yellow** (`--crit`, `--crit-bright`, `--crit-deep`).
