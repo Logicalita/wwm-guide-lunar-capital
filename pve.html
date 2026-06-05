@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PvE Guides — Lunar Capital</title>
+<link rel="icon" type="image/png" href="images/shared/logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260601">
+</head>
+<body>
+
+<button class="hamburger" id="hamburger" aria-label="Mở menu"><i class="ti ti-menu-2"></i></button>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="images/shared/logo.png" alt="Lunar Capital" class="sidebar-logo-img">
+      <div class="sidebar-title"><span class="lc-grad">Lunar Capital</span> GuideBook</div>
+      <div class="sidebar-flourish"><span></span><span class="dot"></span><span></span></div>
+    </div>
+    <div class="sidebar-section-label">Mục lục</div>
+    <nav class="nav">
+      <a class="nav-item" href="index.html#page-intro">
+        <i class="ti ti-scroll"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Lời mở đầu</div>
+          <div class="nav-item-sub">Giới thiệu &amp; mục lục</div>
+        </div>
+      </a>
+      <a class="nav-item" href="index.html#page-guild">
+        <i class="ti ti-users-group"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Guild <span class="lc-grad">Lunar Capital</span></div>
+          <div class="nav-item-sub">Cộng đồng &amp; lịch hoạt động</div>
+        </div>
+      </a>
+      <a class="nav-item" href="index.html#page-chiso-tancong">
+        <i class="ti ti-chart-arcs"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Chỉ số</div>
+          <div class="nav-item-sub">Tất tần tật về chỉ số</div>
+        </div>
+      </a>
+      <div class="nav-group open" id="nav-group-pve">
+        <button class="nav-item nav-group-toggle" aria-expanded="true">
+          <i class="ti ti-sword"></i>
+          <div class="nav-item-content">
+            <div class="nav-item-title">PvE Guides</div>
+            <div class="nav-item-sub">Tank · Healer</div>
+          </div>
+          <i class="ti ti-chevron-down nav-chevron"></i>
+        </button>
+        <div class="nav-children">
+          <button class="nav-item nav-child active" data-page="pve-intro">
+            <i class="ti ti-list-check"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tổng quan</div>
+              <div class="nav-item-sub">Mục lục guide PvE</div>
+            </div>
+          </button>
+      <div class="nav-group" id="nav-group-tank">
+        <button class="nav-item nav-group-toggle" aria-expanded="false">
+          <img src="images/tank/Stonesplit-might.avif" alt="Stonesplit-Might" class="nav-icon-img">
+          <div class="nav-item-content">
+            <div class="nav-item-title">Guide to top DPS Tank</div>
+            <div class="nav-item-sub">Stonesplit-Might</div>
+          </div>
+          <i class="ti ti-chevron-down nav-chevron"></i>
+        </button>
+        <div class="nav-children">
+          <button class="nav-item nav-child" data-page="tank-tongquan">
+            <i class="ti ti-map-2"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tổng quan</div>
+              <div class="nav-item-sub">Mục lục guide Tank</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="tank-chiso">
+            <i class="ti ti-target"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Chỉ số recommend</div>
+              <div class="nav-item-sub">Tối ưu hóa</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="tank-congphap">
+            <i class="ti ti-book-2"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Công pháp</div>
+              <div class="nav-item-sub">Căn cơ trường phái</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child is-hidden" data-page="tank-tampphap">
+            <i class="ti ti-flame"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tâm pháp</div>
+              <div class="nav-item-sub">Tuyệt học</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child is-hidden" data-page="tank-trangbi">
+            <i class="ti ti-sword"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Trang bị</div>
+              <div class="nav-item-sub">Hoàn thiện build</div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="nav-group is-hidden" id="nav-group-heal">
+        <button class="nav-item nav-group-toggle" aria-expanded="false">
+          <i class="ti ti-flower"></i>
+          <div class="nav-item-content">
+            <div class="nav-item-title">Guide Healer thần</div>
+            <div class="nav-item-sub">Silkbind-Deluge</div>
+          </div>
+          <i class="ti ti-chevron-down nav-chevron"></i>
+        </button>
+        <div class="nav-children">
+          <button class="nav-item nav-child" data-page="heal-chiso">
+            <i class="ti ti-target"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Chỉ số recommend</div>
+              <div class="nav-item-sub">Tối ưu hóa</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="heal-congphap">
+            <i class="ti ti-book-2"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Công pháp</div>
+              <div class="nav-item-sub">Căn cơ trường phái</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="heal-tampphap">
+            <i class="ti ti-flame"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Tâm pháp</div>
+              <div class="nav-item-sub">Tuyệt học</div>
+            </div>
+          </button>
+          <button class="nav-item nav-child" data-page="heal-trangbi">
+            <i class="ti ti-sword"></i>
+            <div class="nav-item-content">
+              <div class="nav-item-title">Trang bị</div>
+              <div class="nav-item-sub">Hoàn thiện build</div>
+            </div>
+          </button>
+        </div>
+      </div>
+        </div>
+      </div>
+      <a class="nav-item" href="pvp.html">
+        <i class="ti ti-swords"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">PvP Guides</div>
+          <div class="nav-item-sub">PvP &amp; Guild War Guide</div>
+        </div>
+      </a>
+      <a class="nav-item nav-item-link" href="capnhat-v17.html">
+        <i class="ti ti-news"></i>
+        <div class="nav-item-content">
+          <div class="nav-item-title">Cập nhật v1.7</div>
+          <div class="nav-item-sub">Patch note · 28/05/2026</div>
+        </div>
+        <i class="ti ti-external-link nav-link-icon"></i>
+      </a>
+    </nav>
+    <div class="sidebar-footer">phiên bản tiếng việt</div>
+  </aside>
+
+  <div class="scrim" id="scrim"></div>
+
+  <main class="content">
+
+    <section class="page active" id="page-pve-intro">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,135 L90,95 L160,125 L240,75 L320,108 L400,68 L480,100 L560,80 L640,100 L740,90 L800,108 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L70,125 L150,148 L230,118 L310,138 L390,118 L470,142 L550,122 L630,148 L720,132 L800,148 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">PvE Guides</div>
+            <h1>Hướng dẫn cho chế độ PvE</h1>
+            <div class="sub">Tank, Healer, và sắp tới thêm các class DPS PvE khác — viết bởi thành viên kỳ cựu của guild.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-list-check"></i>Trong file PvE có gì</h2>
+          <div class="toc">
+            <button class="toc-item" data-goto="tank-tongquan">
+              <img src="images/tank/Stonesplit-might.avif" alt="Stonesplit-Might" class="toc-icon nav-icon-img">
+              <div class="toc-content">
+                <div class="toc-title">Guide to top DPS Tank (Stonesplit-Might)</div>
+                <div class="toc-sub">Tổng quan · Chỉ số · Công pháp · Tâm pháp · Trang bị — build <span class="term-crit">chí mạng</span> hoàn chỉnh cho Mạc Đao.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item is-hidden" data-goto="heal-chiso">
+              <i class="ti ti-flower toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Guide Healer thần (Silkbind-Deluge)</div>
+                <div class="toc-sub">Chỉ số · Công pháp · Tâm pháp · Trang bị — build healer hoàn chỉnh.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page tank-tongquan" id="page-tank-tongquan">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Tổng quan</div>
+            <h1>Guide top DPS Tank — Mạc Đao</h1>
+            <div class="sub">Stonesplit-Might · Mục lục, mục tiêu build, và lối chơi cốt lõi.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-flame"></i>Tâm pháp — 2 bộ recommend</h2>
+          <div class="tq-2col">
+            <figure>
+              <img src="images/tank/inner-set-1.png" alt="">
+              <figcaption><strong>Set 1</strong> — Shield dài hơn, tăng khả năng sống sót, recommend cho mọi nhà.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/tank/inner-set-2.png" alt="">
+              <figcaption><strong>Set 2</strong> — Dmg to hơn, mỏng hơn, dành cho player kinh nghiệm.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-sword"></i>Set vũ khí</h2>
+          <figure>
+            <img src="images/tank/rainwhispers.png" alt="">
+            <figcaption>Bộ Thời Vũ (Rainwhispers) — tăng 25% sát thương <span class="term-crit">chí mạng</span>.</figcaption>
+          </figure>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-shield"></i>Set áo giáp</h2>
+          <div class="tq-or-row">
+            <figure>
+              <img src="images/tank/dich-tuong.png" alt="">
+              <figcaption>Bộ Dịch Tương</figcaption>
+            </figure>
+            <div class="tq-or">hoặc</div>
+            <figure>
+              <img src="images/tank/quy-nguyet.png" alt="">
+              <figcaption>Bộ Quý Nguyệt</figcaption>
+            </figure>
+          </div>
+          <div class="note" style="margin-top:10px">
+            <strong>Best:</strong> set tăng thời gian shield và giảm sát thương (<em>Dịch Tương</em>), hoặc set mặc định tạo shield (<em>Quý Nguyệt</em>).
+          </div>
+        </div>
+
+        <div class="key-card">
+          <span class="key-badge">Mục tiêu chính</span>
+          <div class="key-num">56%</div>
+          <div class="key-lbl">Effective <span class="term-crit">chí mạng</span> từ gear</div>
+          <div class="key-desc">
+            Chỉ cần <strong>56% effective crit</strong> (chỉ số vàng) từ trang bị &amp; công pháp — bị động Mạc Đao đã cộng thêm <strong>+24% crit rate</strong> cho đòn tích lực, đẩy tổng lên <strong>80%</strong> (hard cap).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-table"></i>Chỉ số recommended — cấp thế giới 14</h2>
+          <div class="row"><span class="row-src">Độ chính xác</span><span class="row-val">100%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-crit">chí mạng</span></span><span class="row-val">56%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-aff">hiểu ý</span></span><span class="row-val">15.4%</span></div>
+          <div class="row"><span class="row-src">Tỷ lệ <span class="term-crit">chí mạng</span> trực tiếp</span><span class="row-val">4.6%</span></div>
+          <div class="row"><span class="row-src">Công kích vật lý</span><span class="row-val">1300 – 2200</span></div>
+          <div class="row"><span class="row-src">Công kích thuộc tính</span><span class="row-val">350 – 750</span></div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-book-2"></i>Nội dung guide</h2>
+          <div class="toc">
+            <button class="toc-item" data-goto="tank-chiso">
+              <i class="ti ti-target toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Chỉ số recommend</div>
+                <div class="toc-sub">3 chỉ số mục tiêu (56% crit · 15,4% hiểu ý · 100% chính xác), tại sao crit Mạc Đao mạnh gấp đôi, ưu tiên chỉ số trang bị.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item" data-goto="tank-congphap">
+              <i class="ti ti-book-2 toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Công pháp · Căn cơ trường phái</div>
+                <div class="toc-sub">Bát Phong Lôi Thương + Than Sinh Đao Pháp — chi tiết skill chủ động, kỹ năng tích lực, bị động đáng chú ý.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item is-hidden" data-goto="tank-tampphap">
+              <i class="ti ti-flame toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Tâm pháp · Tuyệt học <span class="tag tag-worst" style="font-size:9px">đang cập nhật</span></div>
+                <div class="toc-sub">Adaptive Steel &amp; Exquisite Scenery — bộ tâm pháp tank Mạc Đao. Sắp ra mắt.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+            <button class="toc-item is-hidden" data-goto="tank-trangbi">
+              <i class="ti ti-sword toc-icon"></i>
+              <div class="toc-content">
+                <div class="toc-title">Trang bị · Hoàn thiện build <span class="tag tag-worst" style="font-size:9px">đang cập nhật</span></div>
+                <div class="toc-sub">Bộ Rainwhispers (+10% crit · +15% khi khiên kích hoạt) và các bộ khác — chi tiết slot trang bị, tune đồ. Sắp ra mắt.</div>
+              </div>
+              <i class="ti ti-chevron-right toc-arrow"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page" id="page-tank-chiso">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Chỉ số recommend</div>
+            <h1>Hướng dẫn build <span class="term-crit">chí mạng</span> Tank</h1>
+          </div>
+        </div>
+
+        <div class="key-card">
+          <span class="key-badge">Mục tiêu chính</span>
+          <div class="key-num">56%</div>
+          <div class="key-lbl">Effective <span class="term-crit">chí mạng</span> từ gear</div>
+          <div class="key-desc">
+            Chỉ cần <strong>56% effective</strong> (chỉ số vàng) từ trang bị &amp; công pháp, vì bị động công pháp Mạc Đao đã cho <strong>+24% crit rate cho đòn tích lực</strong>.<br>
+            56% + 24% = 80% (trần crit rate).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-target"></i>Ba chỉ số mục tiêu (effective)</h2>
+          <div class="grid">
+            <div class="tg tg-crit">
+              <div class="tg-n">56%</div>
+              <div class="tg-lbl">chí mạng</div>
+              <div class="tg-raw">~81.2% trắng</div>
+            </div>
+            <div class="tg tg-aff">
+              <div class="tg-n">15.4%</div>
+              <div class="tg-lbl">Hiểu ý</div>
+              <div class="tg-raw">~22.3% trắng</div>
+            </div>
+            <div class="tg tg-prc">
+              <div class="tg-n">100%</div>
+              <div class="tg-lbl">Độ chính xác</div>
+              <div class="tg-raw">~116% trắng</div>
+            </div>
+          </div>
+          <div class="gloss">
+            <div class="gloss-row white-side">
+              <div class="gloss-term">Raw</div>
+              <div class="gloss-def">Chỉ số trắng — số trên gear</div>
+            </div>
+            <div class="gloss-row gold-side">
+              <div class="gloss-term">Effective</div>
+              <div class="gloss-def">Chỉ số vàng = trắng / (1 + kháng)</div>
+            </div>
+          </div>
+          <div class="note">Hiện tại kháng = 45% → <span class="term-crit">chí mạng</span> &amp; <span class="term-aff">hiểu ý</span>: vàng = trắng / 1.45. Độ chính xác có công thức riêng. Các bản cập nhật sau có thể tăng tỷ lệ kháng.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-flame"></i>Vì sao crit Mạc Đao mạnh gấp đôi</h2>
+          <div class="row"><span class="row-src">Bị động Mạc Đao (đòn tích lực)</span><span class="row-val">+10%</span></div>
+          <div class="row"><span class="row-src">Hiệu ứng bộ Rainwhispers</span><span class="row-val">+10%</span></div>
+          <div class="row"><span class="row-src">Rainwhispers khi khiên kích hoạt</span><span class="row-val">+15%</span></div>
+          <div class="row"><span class="row-src">Tâm pháp Adaptive Steel (đòn tích lực)</span><span class="row-val">+20%</span></div>
+          <div class="row"><span class="row-src">Tâm pháp Exquisite Scenery T5</span><span class="row-val">+4.4%</span></div>
+          <div class="row row-total"><span class="row-src">Tổng sát thương crit cộng thêm</span><span class="row-val">+109.4%</span></div>
+          <div class="note">Class khác chỉ được +50% sát thương khi crit. Mạc Đao gấp hơn 2 lần.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-chart-bar"></i>Sát thương trung bình mỗi đòn</h2>
+          <div class="dmg-r">
+            <span class="dmg-l">Đòn thường</span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:47.8%;background:linear-gradient(90deg,#5e564a,#8a7d68)"></div></div>
+            <span class="dmg-v">2.323</span>
+          </div>
+          <div class="dmg-r">
+            <span class="dmg-l"><span class="term-aff">Hiểu ý</span></span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:84.6%;background:linear-gradient(90deg,#3e1e10,#e88e4e)"></div></div>
+            <span class="dmg-v">4.105</span>
+          </div>
+          <div class="dmg-r">
+            <span class="dmg-l"><span class="term-crit">chí mạng</span></span>
+            <div class="dmg-tk"><div class="dmg-f" style="width:100%;background:linear-gradient(90deg,#3e3010,#f0c83a)"></div></div>
+            <span class="dmg-v">4.855</span>
+          </div>
+          <div class="compare">
+            <i class="ti ti-trophy"></i>
+            <div class="compare-text">
+              <strong><span class="term-crit">chí mạng</span> &gt; <span class="term-aff">Hiểu ý</span></strong> — crit hơn <span class="term-aff">hiểu ý</span> ~750 sát thương (~18% mạnh hơn). Đó là lý do crit luôn được ưu tiên cho Mạc Đao.
+            </div>
+          </div>
+          <div class="note">Bảng so sánh dựa trên tính toán chỉ số cố định lvl 81. Lvl 91 chênh lệch sẽ lớn hơn.<br>Crit lấy trung bình roll × hệ số 2.09. <span class="term-aff">Hiểu ý</span> luôn dùng max roll × 1.35.</div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-trending-up"></i>Ưu tiên chỉ số trang bị</h2>
+          <div class="pri">
+            <div class="pri-r"><span class="pri-n">1</span><span class="pri-t">Min thuộc tính khác</span><span class="tag tag-best">tốt nhất</span></div>
+            <div class="pri-r"><span class="pri-n">2</span><span class="pri-t">Max liệt thạch</span></div>
+            <div class="pri-r"><span class="pri-n">3</span><span class="pri-t">Min liệt thạch</span></div>
+            <div class="pri-r"><span class="pri-n">4</span><span class="pri-t">Max ngoại công</span></div>
+            <div class="pri-r"><span class="pri-n">5</span><span class="pri-t">Min ngoại công</span></div>
+            <div class="pri-r"><span class="pri-n">6</span><span class="pri-t">Max thuộc tính khác</span></div>
+            <div class="pri-r"><span class="pri-n">7</span><span class="pri-t">Phòng ngự / sinh lực tối đa</span><span class="tag tag-worst">tệ nhất</span></div>
+          </div>
+          <div class="note">Để hiểu thêm chi tiết, hãy bấm vào sidebar xem <strong>giải thích chỉ số tấn công</strong> nhé!</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page" id="page-tank-congphap">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Công pháp</div>
+            <h1>Căn cơ trường phái</h1>
+          </div>
+        </div>
+
+        <div class="card martial-card">
+          <div class="martial-image-wrap">
+            <img src="images/tank/Stormbreaker-spear.avif" alt="Bát Phong Lôi Thương" class="martial-image">
+          </div>
+          <div class="martial-content">
+            <h2><i class="ti ti-bolt"></i>Bát Phong Lôi Thương</h2>
+            <div class="skill-block">
+              <h3 class="skill-name">Chủ động 1 — Phong Lôi Khiếu</h3>
+              <p>Khiêu khích, giảm sát thương nhận vào, giảm sát thương kẻ địch trúng phải gây ra, tăng chiến ý, buff kĩ năng tích lực.</p>
+            </div>
+            <div class="skill-block">
+              <h3 class="skill-name">Chủ động 2 — Kinh Lôi Chấn</h3>
+              <p>Debuff kẻ địch nhận thêm sát thương.</p>
+            </div>
+            <div class="skill-block">
+              <h3 class="skill-name">Kỹ năng tích lực — Giữ trọng kích</h3>
+              <p>Buff tăng sát thương trọng kích (Thôi Cổ).</p>
+            </div>
+            <div class="skill-block">
+              <h3 class="skill-name">Bị động đáng chú ý</h3>
+              <ul class="skill-list">
+                <li>Tăng max HP với <strong>225 Body hoặc Power</strong>.</li>
+                <li>Tăng sát thương liệt thạch với <strong>268 min sát thương liệt thạch</strong>.</li>
+                <li>Sát thương liệt thạch tăng thêm <strong>50%</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card martial-card">
+          <div class="martial-image-wrap">
+            <img src="images/tank/Thundercry-blade.avif" alt="Than Sinh Đao Pháp" class="martial-image">
+          </div>
+          <div class="martial-content">
+            <h2><i class="ti ti-sword"></i>Than Sinh Đao Pháp</h2>
+            <div class="skill-block">
+              <h3 class="skill-name">Chủ động 1 — Ưng Dương Hổ Thị</h3>
+              <p>Bật khiên <strong>25% max HP</strong>. Nếu có buff kỹ năng tích lực của Thương (Thôi cổ) → kích hoạt khiên và buff sát thương tích lực tầng 2 — <strong>30% (phá trận)</strong>. Phá trận sẽ tiếp tục được buff lại mỗi khi khiên được bật nếu chưa hết buff.</p>
+            </div>
+            <div class="skill-block">
+              <h3 class="skill-name">Chủ động 2 — Trục Nhật Truy Phong</h3>
+              <p>Hút kẻ địch, buff tăng tốc độ tích lực trong <strong>5 giây</strong>.</p>
+            </div>
+            <div class="skill-block">
+              <h3 class="skill-name">Bị động đáng chú ý</h3>
+              <ul class="skill-list">
+                <li>Kĩ năng tích lực và phái sinh (đòn bổ tiếp sau khi tích lực 3 tầng) <strong>sẽ không bao giờ hụt</strong> (gây sát thương xám).</li>
+                <li>Tăng <strong>10% sát thương <span class="term-crit">Chí mạng</span></strong>.</li>
+                <li>Tăng <strong>6.8% tỷ lệ <span class="term-crit">Chí mạng</span></strong> với 225 Body hoặc Power.</li>
+                <li>Tăng <strong>24% tỷ lệ <span class="term-crit">Chí mạng</span></strong> (Effective Critical rate) với đòn trọng kích và phái sinh.</li>
+                <li>Tăng sát thương liệt thạch với <strong>268 min sát thương liệt thạch</strong>; sát thương liệt thạch tăng thêm <strong>50%</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="ti ti-trophy"></i>Tổng kết hướng build PVE</h2>
+          <p class="dmg-flow-intro">
+            Ở level 95, phần lớn sát thương đầu ra của Tank sẽ là <strong>sát thương trọng kích</strong> (đòn bổ của Mạc Đao). Tâm pháp <em>Exquisite Scenery</em> thì lối đánh của Tank phần lớn sẽ là đỡ đòn phản kích, và đòn phản kích này cũng được tính là <strong>trọng kích và phái sinh</strong>. Vậy nên tank chết thì khó mà bổ thì đau.
+          </p>
+          <p class="dmg-flow-intro">Vậy chỉ số cần chú ý để tối ưu hóa sát thương đến từ công pháp:</p>
+          <div class="pri">
+            <div class="pri-r"><span class="pri-n">1</span><span class="pri-t">Tối thiểu <strong>225 Power</strong> để kích hoạt 100% kĩ năng bị động, đồng thời tăng tấn công ngoại công min-max.</span></div>
+            <div class="pri-r"><span class="pri-n">2</span><span class="pri-t">Bỏ qua <strong>Độ chính xác</strong> do đòn bổ không thể bị hụt.</span></div>
+            <div class="pri-r"><span class="pri-n">3</span><span class="pri-t"><strong>268 min sát thương Liệt Thạch</strong>.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-tank-tampphap">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Tâm pháp</div>
+            <h1>Tuyệt học</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-tank-trangbi">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Tank · Trang bị</div>
+            <h1>Hoàn thiện build</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-heal-chiso">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Healer · Chỉ số recommend</div>
+            <h1>Hướng dẫn build <span class="term-crit">chí mạng</span> Healer</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-heal-congphap">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Healer · Công pháp</div>
+            <h1>Căn cơ trường phái</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-heal-tampphap">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Healer · Tâm pháp</div>
+            <h1>Tuyệt học</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page is-hidden" id="page-heal-trangbi">
+      <div class="container">
+
+        <div class="hero">
+          <svg class="hero-mountains" viewBox="0 0 800 200" preserveAspectRatio="xMidYMax slice">
+            <path d="M0,200 L0,140 L70,90 L130,120 L200,80 L280,110 L360,70 L440,100 L520,75 L600,95 L680,85 L800,110 L800,200 Z" fill="#c9a86a" opacity="0.5"/>
+            <path d="M0,200 L0,160 L60,130 L140,150 L220,115 L300,140 L380,120 L460,145 L540,125 L620,150 L720,135 L800,150 L800,200 Z" fill="#8a7338"/>
+          </svg>
+          <div class="hero-content">
+            <div class="eye">Healer · Trang bị</div>
+            <h1>Hoàn thiện build</h1>
+          </div>
+        </div>
+
+        <div class="warn-card">
+          <i class="ti ti-tools"></i>
+          <div class="warn-text">
+            <strong>Đang cập nhật:</strong> Phần này sẽ được bổ sung sau. Anh chị em quay lại sau nhé.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+</div>
+
+<script>
+  const navItems = document.querySelectorAll('.nav-item');
+  const pageButtons = document.querySelectorAll('.nav-item[data-page]');
+  const pages = document.querySelectorAll('.page');
+  const sidebar = document.getElementById('sidebar');
+  const scrim = document.getElementById('scrim');
+  const hamburger = document.getElementById('hamburger');
+
+  document.querySelectorAll('.nav-group-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const group = toggle.closest('.nav-group');
+      const isOpen = group.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+  pageButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const page = btn.dataset.page;
+      navItems.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      pages.forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + page).classList.add('active');
+      let group = btn.closest('.nav-group');
+      while (group) {
+        group.classList.add('open');
+        const toggle = group.querySelector(':scope > .nav-group-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        group = group.parentElement && group.parentElement.closest('.nav-group');
+      }
+      sidebar.classList.remove('open');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+  scrim.addEventListener('click', () => sidebar.classList.remove('open'));
+
+  document.querySelectorAll('[data-goto]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.goto;
+      const navBtn = document.querySelector(`.nav-item[data-page="${target}"]`);
+      if (navBtn) navBtn.click();
+    });
+  });
+
+  // Hash-init: deep-link to a section via #page-<id> in the URL
+  (function () {
+    const hash = window.location.hash.slice(1);
+    if (hash && hash.startsWith('page-')) {
+      const targetBtn = document.querySelector(`.nav-item[data-page="${hash.slice(5)}"]`);
+      if (targetBtn) targetBtn.click();
+    }
+  })();
+</script>
+</body>
+</html>
